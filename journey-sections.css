@@ -1,0 +1,10 @@
+.journey-sections { position:relative; z-index:6; }
+.journey-section { position:relative; display:block; min-height:100svh; isolation:isolate; }
+#journey-projects, #journey-internship { --rift-background-extension:clamp(140px,18vh,220px); margin-top:calc(-1 * var(--rift-background-extension)); padding-top:var(--rift-background-extension); }
+#journey-projects { background:#030913; }
+#journey-internship { --water-overlap:clamp(160px,14vw,220px); background:linear-gradient(to bottom,#020407 calc(100% - var(--water-overlap) - 230px),#0c2030 calc(100% - var(--water-overlap)),transparent 100%); }
+.journey-section:not(.is-rift-active) { clip-path:inset(var(--rift-background-extension) 0 0); }
+.journey-section:focus { outline:none; }
+.journey-section::part(content) { display:block; }
+.journey-section.is-rift-active { will-change:mask-image; }
+@media (prefers-reduced-motion:reduce) { .journey-section { margin-top:0 !important; padding-top:0 !important; clip-path:none !important; mask-image:none !important; -webkit-mask-image:none !important; } }

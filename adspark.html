@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Adspark — EMBER Portfolio</title>
+  <link href="./local-fonts.css?v=20261117-local" rel="stylesheet">
+  <link rel="stylesheet" href="./detail.css">
+  <link rel="stylesheet" href="./navigation.css?v=20261118-nav-spacing">
+  <link rel="stylesheet" href="./adspark.css?v=20261007-typeset">
+  <link rel="stylesheet" href="./adspark-editorial.css?v=20261118-back-right">
+  <link rel="stylesheet" href="./adspark-demo.css?v=20261117-controls">
+  <link rel="stylesheet" href="./adspark-decisions.css?v=20261011-asset-balance">
+  <link rel="stylesheet" href="./adspark-system.css?v=20261011-no-original">
+  <link rel="stylesheet" href="./adspark-validation.css?v=20261013-metric-17">
+  <link rel="stylesheet" href="./adspark-reflection.css?v=20261013-return-right">
+  <link rel="stylesheet" href="./project-footer.css?v=20261117-footer-thanks">
+</head>
+<body class="adspark-page frosted-nav-page">
+  <div class="case-page">
+    <nav class="detail-nav" aria-label="网站导航">
+      <a class="back" href="./index.html" aria-label="返回首页"><span>←</span> <b>BACK TO PORTFOLIO</b><span class="nav-short">首页</span></a>
+      <div class="detail-links">
+        <a href="./about.html" aria-label="关于我"><span>01.</span><b>ABOUT</b><span class="nav-short">关于</span></a>
+        <a href="./ai-projects.html" aria-current="page" aria-label="项目"><span>02.</span><b>PROJECTS</b><span class="nav-short">项目</span></a>
+        <a href="./internship.html" aria-label="实习经历"><span>03.</span><b>INTERNSHIP</b><span class="nav-short">实习</span></a>
+      </div>
+    </nav>
+    <main>
+      <header class="case-header">
+        <a class="back-projects" href="./ai-projects.html">← <span>BACK TO PROJECTS</span></a>
+        <div class="hero-copy"><h1>Adspark</h1>
+        <p class="subtitle">出海电商营销素材 <span>Agentic Workflow</span></p></div>
+        <dl class="project-meta hero-meta">
+          <div><dt>角色</dt><dd>产品负责人 · 全栈开发</dd></div>
+          <div><dt>周期</dt><dd>2026年5月</dd></div>
+          <div><dt>性质</dt><dd>个人独立项目</dd></div>
+          <div><dt>当前状态</dt><dd>MVP · 内部测试</dd></div>
+        </dl>
+      </header>
+      <section class="overview" aria-label="01 项目概览">
+        <div class="summary">
+          <div class="summary-label"><h2>TL;DR</h2><span>太长不看</span></div>
+          <p>Adspark 面向中小型电商出海团队，将市场与品牌信息、素材生成、人工审核和资产记录组织成一条可确认、可修改、可追踪的 Workflow。首期聚焦静态图片，服务新品上市与日常素材迭代两个场景。我独立完成产品设计、前端、后端与 Coze Workflow 搭建，跑通了从结构化 Brief、首次生成、自然语言微调到资产记录的 MVP 主链路。</p>
+        </div>
+        <figure class="product-preview">
+          <img src="./assets/adspark-workspace-preview-web-20261117.webp" width="3400" height="1740" alt="Adspark 工作台中的素材生成与批量选择界面" fetchpriority="high" decoding="async">
+          <figcaption>Adspark 产品界面展示</figcaption>
+        </figure>
+      </section>
+      <section class="case-problem" id="problem" aria-labelledby="problem-title" data-figma-node="58:82">
+        <header class="problem-row problem-intro">
+          <p class="chapter-label"><span>01 /</span> 问题与场景</p>
+          <div class="problem-content">
+            <h2 id="problem-title"><span class="title-phrase">素材生产的难点，</span><span class="title-phrase">不只在生成一张图片</span></h2>
+            <p class="intro-copy">同一产品面向不同市场和活动，需要持续产出差异化素材，同时保持品牌与产品的一致性。<br>我将问题聚焦在中小型电商出海团队的素材生产：如何让每一轮生成，都能承接明确的任务与已有经验？</p>
+          </div>
+        </header>
+        <section class="problem-row" aria-labelledby="users-title">
+          <h3 class="section-label" id="users-title"><span aria-hidden="true"></span>用户与场景</h3>
+          <div class="problem-content">
+            <h4 class="users-heading">两类用户，共同完成一轮素材生产</h4>
+            <div class="user-cards">
+              <article class="user-card">
+                <img class="role-icon" src="./assets/adspark-02/creative-user.svg" width="88" height="88" alt="" aria-hidden="true">
+                <div class="role-copy"><p class="role-label">主要使用者</p><h5>内容／创意运营</h5><p class="role-description">快速获得可用首稿，保持产品形态、材质与核心设计元素一致。</p></div>
+              </article>
+              <article class="user-card">
+                <img class="role-icon" src="./assets/adspark-02/growth-user.svg" width="88" height="88" alt="" aria-hidden="true">
+                <div class="role-copy"><p class="role-label">反馈协作角色</p><h5>投放／增长协作</h5><p class="role-description">获得可测试的素材变体，并能追溯素材对应的修改与反馈。</p></div>
+              </article>
+            </div>
+            <ol class="scenario-list">
+              <li><span class="scenario-label">场景一</span><h5>新品／新市场启动</h5><p>整合市场信息、产品资料与品牌规范，为不同审美偏好的市场快速生成多组差异化创意素材</p></li>
+              <li><span class="scenario-label">场景二</span><h5>主题活动／日常迭代</h5><p>围绕已有素材或特定主题派生变体，延续修改记录，减少每轮重新整理上下文。</p></li>
+            </ol>
+          </div>
+        </section>
+        <section class="problem-row" aria-labelledby="insights-title">
+          <h3 class="section-label" id="insights-title"><span aria-hidden="true"></span>痛点到洞察</h3>
+          <div class="problem-content pain-grid">
+            <article class="pain-column"><div class="pain-card"><img class="pain-icon" src="./assets/adspark-02/prompt-pain.svg" width="48" height="48" alt="" aria-hidden="true"><h4>效率瓶颈与“提示词疲劳”</h4><p>提示词编写耗时、需求难表达，<br>反复试错造成“提示词疲劳”。</p></div><div class="need-arrow"><img class="" src="./assets/adspark-02/down-arrow.svg" width="32" height="32" alt="" aria-hidden="true"></div><div class="need-card"><span class="need-label">对应需求</span><p>减少提示词编写与反复试错，<br>快速获得可用首稿。</p></div></article>
+            <article class="pain-column"><div class="pain-card"><img class="pain-icon" src="./assets/adspark-02/product-pain.svg" width="48" height="48" alt="" aria-hidden="true"><h4>资产一致性的“硬伤”</h4><p>产品形态与材质易失真，<br>损害品牌一致性与溢价。</p></div><div class="need-arrow"><img class="" src="./assets/adspark-02/down-arrow.svg" width="32" height="32" alt="" aria-hidden="true"></div><div class="need-card"><span class="need-label">对应需求</span><p>生成素材时保持产品形态、材质<br>与核心设计元素不失真。</p></div></article>
+            <article class="pain-column"><div class="pain-card"><img class="pain-icon" src="./assets/adspark-02/feedback-pain.svg" width="48" height="48" alt="" aria-hidden="true"><h4>数据与创意的“经验孤岛”</h4><p>生成与投放环节脱节，<br>效果数据难以反哺创意。</p></div><div class="need-arrow"><img class="" src="./assets/adspark-02/down-arrow.svg" width="32" height="32" alt="" aria-hidden="true"></div><div class="need-card"><span class="need-label">对应需求</span><p>将投放反馈用于下一轮素材生成，复用已验证有效的经验。</p></div></article>
+          </div>
+        </section>
+        <section class="problem-row competitors" aria-labelledby="competitors-title">
+          <h3 class="section-label" id="competitors-title"><span aria-hidden="true"></span>竞品与机会</h3>
+          <div class="problem-content competitor-list">
+            <article class="competitor-row"><div class="competitor-name"><img class="" src="./assets/adspark-02/image-category.svg" width="44" height="44" alt="" aria-hidden="true"><h4>通用生成式 AI<span>( Midjourney ）</span></h4></div><span class="competitor-divider" aria-hidden="true"></span><p>具备较强的艺术渲染与图像编辑能力。用于商业素材时，需要核对产品形态、材质与品牌规范，并组织生成之外的审核协作与反馈记录。</p></article>
+            <article class="competitor-row"><div class="competitor-name"><img class="" src="./assets/adspark-02/platform-category.svg" width="44" height="44" alt="" aria-hidden="true"><h4>平台原生 AI 工具<span>( TikTok Symphony )</span></h4></div><span class="competitor-divider" aria-hidden="true"></span><p>围绕媒体平台支持敏捷生产与本地化。跨平台使用时，仍需协调不同平台的素材要求，维护统一的品牌规范与可复用记录。</p></article>
+            <article class="competitor-row"><div class="competitor-name"><img class="" src="./assets/adspark-02/agent-category.svg" width="44" height="44" alt="" aria-hidden="true"><h4>专业营销智能体<span>( Navos )</span></h4></div><span class="competitor-divider" aria-hidden="true"></span><p>采用多 Agent 协同编排，覆盖洞察、创意、投放诊断与资产管理。本项目应聚焦其中的静态素材生产，优先连接生成、审核与记录。</p></article>
+          </div>
+        </section>
+        <section class="problem-row" aria-labelledby="position-title">
+          <h3 class="section-label" id="position-title"><span aria-hidden="true"></span>产品定位</h3>
+          <div class="problem-content position-conclusion"><p><span class="position-lead"><span class="position-context">用户当前需要的不是一个“更会画图的对话框”，而是一个</span><strong><span class="position-phrase">能承载品牌规则、</span><span class="position-phrase">市场知识和数据反馈的</span><span class="position-phrase">生产力操作系统。</span></strong></span><span class="position-detail">因此我选择用 Workflow 编排品牌规则与市场知识，连接素材的生成、审核与记录 ; 在关键节点保留人工判断，让生产过程可追溯、创意经验可复用。</span></p></div>
+        </section>
+      </section>
+      <section class="case-demo" id="demo" aria-labelledby="demo-title">
+        <p class="demo-chapter"><span>03 /</span> 产品演示</p>
+        <div class="demo-content">
+          <header class="demo-intro">
+            <h2 id="demo-title"><span class="demo-title-phrase">从输入需求，</span><span class="demo-title-phrase">到生成、微调与保存。</span></h2>
+            <p>用自然语言描述需求，确认 Brief 后生成素材，再微调并保存结果。</p>
+          </header>
+          <figure class="demo-media">
+            <div class="demo-player"><video class="demo-video" controls playsinline preload="metadata" aria-label="Adspark 产品演示视频">
+              <source src="./assets/adspark-product-demo-2k-20261117.mp4" type="video/mp4">
+              您的浏览器暂不支持视频播放。<a href="./assets/adspark-product-demo-2k-20261117.mp4">打开演示视频</a>
+            </video><button type="button" class="demo-start" aria-label="播放视频" hidden>▶</button><div class="demo-controls" hidden>
+              <button type="button" class="demo-play" aria-label="播放视频">▶</button>
+              <span class="demo-time" aria-live="off">0:00 / 0:00</span>
+              <input class="demo-seek" type="range" min="0" max="1000" value="0" aria-label="视频进度">
+              <button type="button" class="demo-speed" aria-label="播放速度：1倍，点击切换到1.5倍">1×</button>
+              <button type="button" class="demo-fullscreen" aria-label="全屏播放">全屏</button>
+            </div></div>
+          </figure>
+          <ol class="demo-flow" aria-label="演示操作流程">
+            <li>输入素材概述</li>
+            <li>选择偏好与参考</li>
+            <li>确认并编辑摘要</li>
+            <li>生成素材</li>
+            <li>指定素材并微调</li>
+            <li>保存与导出</li>
+            <li>查看资产记录</li>
+          </ol>
+        </div>
+      </section>
+      <section class="case-decisions" id="decisions" aria-labelledby="decisions-title">
+        <p class="decisions-chapter"><span>04 /</span> 关键产品决策</p>
+        <div class="decisions-content">
+          <header class="decisions-intro">
+            <h2 id="decisions-title">从对话框到工作台的演进</h2>
+          </header>
+          <div class="decision-tabs" role="tablist" aria-label="四项关键产品决策" hidden>
+            <button type="button" role="tab" id="decision-tab-chat" aria-controls="decision-panel-chat" aria-selected="true" tabindex="0"><span>1.</span>工作台布局</button>
+            <button type="button" role="tab" id="decision-tab-brief" aria-controls="decision-panel-brief" aria-selected="false" tabindex="-1"><span>2.</span>交互创新-摘要卡片</button>
+            <button type="button" role="tab" id="decision-tab-refine" aria-controls="decision-panel-refine" aria-selected="false" tabindex="-1"><span>3.</span>多源知识融合</button>
+            <button type="button" role="tab" id="decision-tab-human" aria-controls="decision-panel-human" aria-selected="false" tabindex="-1"><span>4.</span>资产与反馈</button>
+          </div>
+          <div class="decision-browser">
+          <article class="decision" id="decision-panel-chat" data-decision="chat" aria-labelledby="decision-chat-title">
+            <div class="decision-copy">
+              <h3 id="decision-chat-title">从纯 Chat 到“左对话＋右画布”</h3>
+              <p>V1 采用纯 Chat，连续结果和多版比较容易造成信息淹没。V2 采用“左对话 | 右画布”的布局。将左侧用于意图澄清与摘要补全，右侧用于生成结果、比较、审核和高密度操作。</p>
+              <p class="decision-reflection">思考沉淀：不要把用户锁在聊天框里。交互的设计应基于系统对需求的“置信度”来调整</p>
+            </div>
+            <div class="decision-gallery" aria-label="工作台布局图片展示">
+              <figure class="gallery-slide" data-slide-title="V1 · 纯 Chat"><div class="gallery-visual"><a class="gallery-original" href="./assets/adspark-04/v1-chat-user.png" target="_blank" rel="noopener" aria-label="放大查看V1 · 纯 Chat"><img src="./assets/adspark-04/v1-chat-user.png" width="1097" height="831" alt="V1对话界面：生成图片与生成依据说明沿聊天区域展开" loading="lazy"></a></div><figcaption>V1：生成结果与依据说明沿对话时间流展开。</figcaption></figure>
+              <figure class="gallery-slide" data-slide-title="V2 · 左对话＋右画布"><div class="gallery-visual"><a class="gallery-original" href="./assets/adspark-04/v2-workbench-user.png" target="_blank" rel="noopener" aria-label="放大查看V2 · 左对话＋右画布"><img src="./assets/adspark-04/v2-workbench-user.png" width="3400" height="1740" alt="V2工作台：左侧自然语言对话与摘要，右侧多版生成素材及选中状态" loading="lazy"></a></div><figcaption>V2：左侧对话与任务摘要，右侧集中展示多版素材与选中状态。</figcaption></figure>
+            </div>
+          </article>
+          <article class="decision" id="decision-panel-brief" data-decision="brief" aria-labelledby="decision-brief-title">
+            <div class="decision-copy">
+              <h3 id="decision-brief-title">摘要卡片的“置信度交互”</h3>
+              <p>用户在对话框内先用自然语言表达直觉想法，再通过摘要卡片将其转化为结构化的专业信息，可对信息进行补充和编辑。通过“精准输入不打断、模糊输入才辅助”的模式，降低用户表达门槛，确保了商业素材生产的确定性。</p>
+              <p class="decision-reflection"><strong>思考沉淀：</strong>用户不擅长、也不该学习复杂的 Prompt。我们要从“人找流程”转变为“流程找人”</p>
+            </div>
+            <div class="decision-gallery" aria-label="任务摘要图片展示">
+              <figure class="gallery-slide" data-slide-title="摘要编辑与确认"><div class="gallery-visual"><a class="gallery-original" href="./assets/adspark-04/brief-edit-confirm-updated.png" target="_blank" rel="noopener" aria-label="放大查看摘要编辑与确认"><img src="./assets/adspark-04/brief-edit-confirm-updated.png" width="527" height="751" alt="摘要草稿第2版：可编辑市场、主题、风格、场景、主体及平台字段，并确认生成" loading="lazy"></a></div><figcaption>修改结构化摘要字段，确认后再进入生成。</figcaption></figure>
+              <figure class="gallery-slide" data-slide-title="自然语言需求与摘要回显"><div class="gallery-visual"><a class="gallery-original" href="./assets/adspark-04/brief-input-summary.png" target="_blank" rel="noopener" aria-label="放大查看自然语言需求与摘要回显"><img src="./assets/adspark-04/brief-input-summary.png" width="595" height="857" alt="自然语言需求与产品参考图，以及市场、主题、风格、场景、主体和平台的摘要回显" loading="lazy"></a></div><figcaption>自然语言需求转成结构化摘要，并在对话中回显。</figcaption></figure>
+            </div>
+          </article>
+          <article class="decision" id="decision-panel-refine" data-decision="refine" aria-labelledby="decision-refine-title">
+            <div class="decision-copy">
+              <h3 id="decision-refine-title">提示词熔炉：融合知识生成指令</h3>
+              <p>功能定义：融合用户需求、品牌 SOP 与禁用项、竞品及市场趋势、历史素材与反馈，编排为结构化 JSON 生图指令。</p>
+              <p class="decision-reflection">核心价值：将品牌约束与视觉参考融入生成过程，减少产品外观偏移，支持市场适配与历史策略复用；自动补全专业视觉描述，降低用户编写 Prompt 的门槛。</p>
+            </div>
+            <div class="decision-gallery" aria-label="提示词熔炉图片展示">
+              <figure class="gallery-slide" data-slide-title="Coze 多源知识融合 Workflow"><div class="gallery-visual"><a class="gallery-original" href="./assets/adspark-04/multi-source-knowledge-final.png" target="_blank" rel="noopener" aria-label="放大查看 Coze 多源知识融合 Workflow"><img src="./assets/adspark-04/multi-source-knowledge-final.png" width="1428" height="892" alt="Coze Workflow：视觉图册与品牌SOP经KnowledgeFusion融合，历史案例与市场趋势一起汇入Prompt Smelter" loading="lazy"></a></div><figcaption>品牌规范、视觉锚点、历史案例与市场趋势汇入生图指令。</figcaption></figure>
+            </div>
+          </article>
+          <article class="decision" id="decision-panel-human" data-decision="human" aria-labelledby="decision-human-title">
+            <div class="decision-copy">
+              <h3 id="decision-human-title">资产进化：沉淀反馈复用经验</h3>
+              <p>功能定义：将素材、Prompt、视觉特征与审核状态关联存档，结合人工回填的投放指标，由 Workflow 按素材 ID 更新记录，供后续任务检索参考。</p>
+              <p class="decision-reflection">核心价值：让素材的生成依据与反馈可查看、可追溯，将单次生成结果沉淀为可复用资产，为下一轮创作提供参考。</p>
+            </div>
+            <div class="decision-gallery" aria-label="资产与反馈图片展示">
+              <figure class="gallery-slide" data-slide-title="资产详情与反馈记录原型"><div class="gallery-visual"><a class="gallery-original" href="./assets/adspark-04/asset-evolution-detail.png" target="_blank" rel="noopener" aria-label="放大查看资产详情与反馈记录原型，所示投放数值为演示数据"><img src="./assets/adspark-04/asset-evolution-detail.png" width="1914" height="984" alt="资产详情原型：素材、生成信息和投放数据展示在同一记录中；画面中的指标是演示数据" loading="lazy"></a></div><figcaption>资产库保存用户已确认素材及其生成指令，支持投放数据回填，为后续素材复用提供参考。</figcaption></figure>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+      <section class="case-system" id="system" aria-labelledby="system-title">
+        <p class="system-chapter"><span>05 /</span> 系统如何运行</p>
+        <div class="system-content">
+          <h2 id="system-title">从结构化 Brief，到多源知识、生成与资产沉淀。</h2>
+          <p class="system-intro">需求经过意图识别与多源知识编排，进入生成或微调链路，经人工审核后沉淀为素材记录。</p>
+          <div class="system-stage">
+            <a class="system-diagram" href="./assets/adspark-05/architecture-final.png" target="_blank" rel="noopener" aria-label="放大查看系统架构图"><img src="./assets/adspark-05/architecture-final.png" width="1800" height="1280" alt="Adspark 系统架构：输入调度、首次生成与独立微调链路、人工审核及数据持久化与知识增强回路" loading="lazy"></a>
+            <aside class="system-evidence" aria-label="可选的Coze实现佐证">
+              <p>实现佐证 · 按需查看</p>
+              <button class="system-entry" data-evidence="knowledge" aria-haspopup="dialog"><svg viewBox="0 0 128 38" preserveAspectRatio="none" aria-hidden="true"><polygon points="0.5,0.5 127.5,0.5 127.5,27.8 116.8,37.5 0.5,37.5"/></svg>知识编排<span aria-hidden="true">↗</span></button>
+              <button class="system-entry" data-evidence="writeback" aria-haspopup="dialog"><svg viewBox="0 0 128 38" preserveAspectRatio="none" aria-hidden="true"><polygon points="0.5,0.5 127.5,0.5 127.5,27.8 116.8,37.5 0.5,37.5"/></svg>记录写回<span aria-hidden="true">↗</span></button>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section class="case-validation" id="validation" aria-labelledby="validation-title">
+        <div class="validation-row validation-opening">
+          <div class="validation-chapter"><p><span>06 /</span> 验证与结果</p></div>
+          <div class="validation-content">
+            <h2 id="validation-title">从技术可用到产品价值的验证</h2>
+            <p class="validation-intro">MVP 已串起素材生产流程，验证重点从“能生成”延伸到质量、稳定性与成本。</p>
+            <div class="validation-outcomes">
+              <article class="validation-outcome validation-outcome-primary" aria-labelledby="efficiency-title">
+                <h3 id="efficiency-title">素材生产耗时减少</h3>
+                <p class="validation-number">50%–60%</p>
+                <p class="validation-estimate">内部试用估算 · 相比人工整理、调整与保存流程</p>
+                <p class="validation-formula">耗时减少比例＝（人工流程耗时－Adspark 流程耗时）÷ 人工流程耗时 × 100%</p>
+              </article>
+              <article class="validation-outcome validation-outcome-delivered" aria-labelledby="delivered-title">
+                <h3 id="delivered-title">已完成全栈 MVP</h3>
+                <p>需求确认、生成、微调、审核与资产记录已串联。</p>
+                <div class="validation-delivered-summary"><p>开发阶段内部试用</p><strong>完成 20+ 组素材任务</strong></div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="validation-row validation-assessment">
+          <h3 class="validation-section-label" id="assessment-title"><span aria-hidden="true"></span>三层评测指标</h3>
+          <div class="validation-assessment-content" aria-labelledby="assessment-title">
+            <img class="validation-pyramid" src="./assets/adspark-06/evaluation-pyramid.svg" width="340" height="384" alt="三层透视金字塔，从上到下对应模型层、产品层与业务层评测" loading="lazy">
+            <div class="validation-layers">
+              <article class="validation-layer">
+                <h4>模型层（理解与稳定性）</h4>
+                <div><p class="validation-metric">意图识别与关键字段准确率 ≥95% · 端到端任务成功率 ≥95%</p><p class="validation-status">两个 95% 均为待验证目标。需求理解与微调整体符合预期；仍需评测槽位解析准确率、RAG 召回有效率、Prompt 熔炼成功率、生成素材与图生图约束契合度。</p></div>
+              </article>
+              <article class="validation-layer">
+                <h4>产品层（效率与可用性）</h4>
+                <div><p class="validation-metric"><span class="validation-metric-part">耗时减少约 50%–60%（内部估算）</span> · <span class="validation-metric-part">首版采纳率（目标 &gt;70%）</span></p><p class="validation-status">流程操作得到简化，素材质量仍需人工检查。仍需评测摘要卡片纠错率、平均调整轮次与最终素材可用率。</p></div>
+              </article>
+              <article class="validation-layer">
+                <h4>业务层（资产与成本）</h4>
+                <div><p class="validation-metric">单位合格素材成本（目标下降 30%–40%）</p><p class="validation-status">已完成：资产记录与人工回填基础。待验证：审核通过率、投放 CTR 的潜在提升预估、实际成本下降与投放收益。</p></div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="validation-row validation-findings">
+          <h3 class="validation-section-label" id="findings-title"><span aria-hidden="true"></span>三个关键发现</h3>
+          <div class="validation-findings-content" aria-labelledby="findings-title">
+            <div class="validation-findings-head" aria-hidden="true"><span>发现</span><span>原因判断</span><span>下一步</span></div>
+            <article class="validation-finding">
+              <p class="validation-observation"><span class="validation-mobile-label">发现</span>无参考图时，生成图中的产品易偏移；图生图时，视觉图册的额外作用不明显。</p>
+              <p class="validation-reason"><span class="validation-mobile-label">原因判断</span>参考图直接提供产品形态与材质；视觉图册通过文字指令间接约束生图模型。</p>
+              <p class="validation-next"><span class="validation-mobile-label">下一步</span>我将明确参考图要求，并用同一任务验证视觉图册的额外作用。</p>
+            </article>
+            <article class="validation-finding">
+              <p class="validation-observation"><span class="validation-mobile-label">发现</span>生成图通常符合用户对主体与场景的要求，但部分图片的画面质感不理想。</p>
+              <p class="validation-reason"><span class="validation-mobile-label">原因判断</span>生图指令较详细；我判断，画面质感差异主要受生图模型的表现能力影响。</p>
+              <p class="validation-next"><span class="validation-mobile-label">下一步</span>我将分别评估内容准确性与质感，并用同一任务对比不同生图模型。</p>
+            </article>
+            <article class="validation-finding">
+              <p class="validation-observation"><span class="validation-mobile-label">发现</span>竞品雷达抓取为空不影响生成；抓取节点异常或生图模型停用可能中断链路。</p>
+              <p class="validation-reason"><span class="validation-mobile-label">原因判断</span>系统允许缺少竞品信息继续生成，但未对抓取异常或模型停用设置兜底。</p>
+              <p class="validation-next"><span class="validation-mobile-label">下一步</span>我将为竞品抓取增加异常降级与有限重试，并为生图节点设置备用模型。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="case-reflection" id="reflection" aria-labelledby="reflection-title">
+        <p class="reflection-chapter"><span>07 /</span> 复盘与沉淀</p>
+        <div class="reflection-content">
+          <h2 id="reflection-title">从项目实践到产品思考</h2>
+          <p class="reflection-intro">从功能搭建走向产品判断，沉淀三个可复用的方法。</p>
+          <div class="reflection-cards">
+            <article class="reflection-card reflection-card-wide" aria-labelledby="reflection-quality-title">
+              <header class="reflection-card-heading">
+                <div class="reflection-topic"><span class="reflection-number" aria-hidden="true">01</span><span>质量归因</span></div>
+                <h3 id="reflection-quality-title">Badcase 归因</h3>
+              </header>
+              <div class="reflection-card-copy">
+                <p class="reflection-body">生成素材仍会出现形态偏移或风格误读，单纯重试难以解决。AI 输出具有随机性，需要可度量的反馈来定位问题。归因时应分别检查模型能力、提示词约束与 RAG 召回，区分是材质约束不足，还是风格知识未被有效召回和应用。</p>
+                <p class="reflection-takeaway">评测即产品需求。若重做，应更早建立离线评测集，再针对失败类型优化指令约束或更换模型。</p>
+              </div>
+            </article>
+            <div class="reflection-pair">
+              <article class="reflection-card reflection-card-primary" aria-labelledby="reflection-mvp-title">
+                <header class="reflection-card-heading">
+                  <div class="reflection-topic"><span class="reflection-number" aria-hidden="true">02</span><span>MVP 取舍</span></div>
+                  <h3 id="reflection-mvp-title">围绕核心价值确定验证顺序</h3>
+                </header>
+                <p class="reflection-body">Adspark 的价值在于帮助用户更快获得可用素材。因此，MVP 应优先验证素材是否可用、操作是否省时，再判断知识库与数据反馈带来多少额外收益。</p>
+                <p class="reflection-takeaway">功能取舍应以核心价值为依据，避免把功能数量当成产品成熟度。</p>
+              </article>
+              <article class="reflection-card" aria-labelledby="reflection-value-title">
+                <header class="reflection-card-heading">
+                  <div class="reflection-topic"><span class="reflection-number" aria-hidden="true">03</span><span>价值可见</span></div>
+                  <h3 id="reflection-value-title">让用户理解结果从何而来</h3>
+                </header>
+                <p class="reflection-body">后台保存数据，并不代表用户能感知它的价值。将生成依据、视觉特征与修改记录呈现在工作台中，才能让用户理解、判断和追溯结果。</p>
+                <p class="reflection-takeaway">AI 的增益的过程与结果必须可视化，否则无法建立用户信任。</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="project-footer" aria-labelledby="project-footer-title">
+        <h2 class="project-footer-title" id="project-footer-title">Thank you for reading</h2>
+        <a class="next-project" href="./fitmirror.html" aria-label="下一个项目：FitMirror">
+          <img class="next-project-image" src="./assets/fitmirror/project-card-landscape-v1.png" width="1920" height="1200" alt="FitMirror五手机产品界面预览" loading="lazy" decoding="async">
+          <span class="next-project-copy">
+            <span class="next-project-label">Next project <span aria-hidden="true">→</span></span>
+            <span class="next-project-title">FitMirror</span>
+            <span class="next-project-description">用个人照片预览服饰上身效果，探索衣橱搭配。</span>
+          </span>
+        </a>
+        <a class="project-footer-back" href="./ai-projects.html" aria-label="返回项目列表"><span aria-hidden="true">←</span> Back to all projects</a>
+      </footer>
+      <dialog class="system-dialog" aria-labelledby="system-dialog-title">
+        <div class="system-dialog-body">
+          <header><div><span class="system-badge">实现佐证 / Coze 工作流</span><h2 id="system-dialog-title"></h2></div><button class="system-close" aria-label="关闭详情">×</button></header>
+          <div class="system-carousel" aria-roledescription="轮播">
+            <div class="system-slide"></div>
+            <button class="system-arrow system-prev" aria-label="上一张图片">‹</button><button class="system-arrow system-next" aria-label="下一张图片">›</button>
+          </div>
+          <p class="system-caption" aria-live="polite"></p><div class="system-dots" aria-label="选择证据图片"></div>
+        </div>
+      </dialog>
+    </main>
+  </div>
+  <script src="./page-edits.js?v=1"></script>
+  <script src="./adspark-interactions.js?v=20261007-editorial" defer></script>
+  <script src="./adspark-decisions.js?v=20261010-zoom-no-caption" defer></script>
+  <script src="./adspark-system.js?v=20261011-no-original" defer></script>
+  <script src="./adspark-validation.js?v=20261013-cap-lower" defer></script>
+  <script src="./adspark-video.js?v=20261117-controls" defer></script>
+</body>
+</html>

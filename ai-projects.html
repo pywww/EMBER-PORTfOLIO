@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Projects — EMBER Portfolio</title>
+  <link href="./local-fonts.css?v=20261117-local" rel="stylesheet">
+  <link rel="stylesheet" href="./detail.css">
+  <link rel="stylesheet" href="./navigation.css?v=20261118-nav-spacing">
+  <link rel="preload" as="image" type="image/webp" href="./assets/projects-ocean/ornaments-desktop-v3.webp">
+  <link rel="stylesheet" href="./projects.css?v=20261118-project-hover-scale">
+</head>
+<body class="projects-page frosted-nav-page">
+  <nav class="detail-nav" aria-label="网站导航">
+    <a class="back" href="./index.html" aria-label="返回首页"><span>←</span> <b>BACK TO PORTFOLIO</b></a>
+    <div class="detail-links">
+      <a href="./about.html" aria-label="关于我"><span>01.</span><b>ABOUT</b></a>
+      <a href="./ai-projects.html" aria-current="page" aria-label="项目"><span>02.</span><b>PROJECTS</b></a>
+      <a href="./internship.html" aria-label="实习经历"><span>03.</span><b>INTERNSHIP</b></a>
+    </div>
+  </nav>
+  <main class="detail-main">
+    <header class="projects-intro">
+      <h1 lang="en">Projects</h1>
+      <p class="projects-subtitle" lang="en">From curious ideas to products worth exploring.</p>
+    </header>
+    <section class="project-grid" aria-label="项目列表">
+      <a class="project-card" id="project-one" href="./adspark.html" aria-labelledby="adspark-card-title">
+        <div class="project-cover cover-adspark"><img class="project-workbench-image" src="./assets/adspark-card-laptop-v1.svg" width="960" height="600" alt="电脑样机中的Adspark工作台，左侧确认需求，右侧查看生成的营销图片" fetchpriority="high" decoding="async"></div>
+        <div class="project-copy">
+          <p class="project-category">AI 工作流 · Web 应用</p>
+          <h2 id="adspark-card-title">Adspark</h2>
+          <span class="project-tags"><span>营销素材</span></span>
+          <span class="project-view-cue" aria-hidden="true">查看项目 <span>↗</span></span>
+          <p class="project-description">围绕出海电商的素材生产，串起需求输入、图片生成、筛选修改与素材管理。</p>
+          </div>
+      </a>
+      <a class="project-card" id="project-two" href="./fitmirror.html" aria-labelledby="fitmirror-card-title">
+        <div class="project-cover cover-fitmirror"><img class="project-overview-image" src="./assets/fitmirror/project-card-landscape-v1.svg" width="960" height="600" alt="FitMirror横版五手机界面汇总，展示首页、服饰选择、试穿结果、衣橱与穿搭工坊" decoding="async"></div>
+        <div class="project-copy">
+          <p class="project-category">AI 试穿 · 移动 App</p>
+          <h2 id="fitmirror-card-title">FitMirror</h2>
+          <span class="project-tags"><span>虚拟试穿</span></span>
+          <span class="project-view-cue" aria-hidden="true">查看项目 <span>↗</span></span>
+          <p class="project-description">以个人照片预览服饰上身效果，围绕试穿结果探索线上选衣与搭配体验。</p>
+          </div>
+      </a>
+    </section>
+  </main>
+</body>
+</html>

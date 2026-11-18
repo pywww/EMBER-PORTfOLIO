@@ -1,0 +1,272 @@
+
+/* Reference layout adapted to the existing portfolio visual system. */
+:root{color-scheme:dark;--case-paper:var(--ink);--case-ink:var(--paper);--case-muted:#bdc8d0;--case-rule:var(--line)}
+*{box-sizing:border-box}
+body{margin:0;color:var(--case-ink);font-family:Manrope,'Noto Sans SC',sans-serif;-webkit-font-smoothing:antialiased}
+body.adspark-page{background-image:none}
+.adspark-page .nav-short{display:none}
+@media(max-width:900px){.adspark-page .project-meta{margin-top:96px}}
+@media(max-width:680px){
+  body.adspark-page.frosted-nav-page .detail-nav{padding-inline:20px;justify-content:space-between}
+  .adspark-page .detail-nav .back{display:flex;align-items:center;gap:6px;font-size:13px}
+  .adspark-page .detail-links{margin-left:20px;gap:20px}
+  .adspark-page .detail-links a{font-size:13px;min-height:44px}
+  .adspark-page .detail-links a>span:not(.nav-short){display:none}
+  .adspark-page .detail-nav .nav-short{display:inline;color:inherit}
+}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:6px}
+.case-page{min-height:100vh;padding-bottom:80px}
+.case-nav{display:flex;align-items:center;gap:48px;min-height:87px;padding:24px clamp(24px,6.35vw,96px);font-size:14px}
+.brand{letter-spacing:1.75px;font-weight:500}
+.nav-links{display:flex;align-items:center;gap:32px;color:var(--case-muted)}
+.nav-links [aria-current]{color:var(--case-ink)}
+.adspark-page main{width:100%;max-width:none;margin:0;padding-inline:clamp(20px,7vw,112px)}
+@media(max-width:640px){.adspark-page main{padding-inline:20px}}
+.case-header{padding-top:90px}
+.adspark-page .case-header,.adspark-page .overview{width:min(1300px,100%);max-width:1240px;margin-inline:auto}
+.back-projects{display:flex;align-items:center;justify-content:flex-end;gap:12px;font-size:12px;letter-spacing:2.4px;color:var(--case-muted)}
+h1{font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(60px,6.35vw,96px);line-height:1.1;letter-spacing:-.025em;margin:54px 0 12px}
+.subtitle{font-size:clamp(20px,2.38vw,36px);line-height:1.4;color:var(--accent);margin:0}
+.project-meta{display:grid;grid-template-columns:1fr 1.2fr 1fr 1fr 1fr;gap:24px;align-items:start;margin:112px 0 0;padding:33px 12px 40px;border-block:2px solid var(--case-rule)}
+dt{font-size:12px;line-height:16px;letter-spacing:1.2px;color:var(--muted)}
+dd{font-size:14px;line-height:1.6;margin:10px 0 0;font-weight:500}
+.product-preview{margin:48px 0 0}
+.preview-placeholder{width:100%;height:clamp(180px,22vw,280px);background:#0b141d;border:1px solid var(--line)}
+figcaption{text-align:center;margin-top:16px;font-size:12px;letter-spacing:1.2px;color:var(--muted)}
+.summary{display:grid;grid-template-columns:172px minmax(0,1fr);gap:80px;margin-top:56px;align-items:start;width:100%}
+.summary-label{border-right:1px solid var(--line);min-height:100px;padding-right:24px}
+.summary-label h2{font-family:Manrope,'Noto Sans SC',sans-serif;font-weight:400;font-size:1.5rem;line-height:2rem;margin:0 0 8px}
+.summary-label span{font-size:14px;font-weight:300;color:var(--muted);letter-spacing:1.4px}
+.summary p{margin:0;font-size:16px;line-height:1.85;color:var(--case-muted);width:100%;text-align:justify;text-justify:inter-character}
+.adspark-page main :is(p:not(.subtitle),dt,dd,figcaption,.summary-label span){font-weight:250}
+.adspark-page .overview p{letter-spacing:.03em}
+.adspark-page .project-meta :is(dt,dd){letter-spacing:.03em}
+body.adspark-page main .project-meta dt{font-size:14px;font-weight:500;line-height:22px;color:var(--accent)}
+@media(max-width:900px){.case-nav{gap:32px}.case-header{padding-top:80px}.project-meta{margin-top:140px;grid-template-columns:repeat(3,1fr);row-gap:28px}.summary{grid-template-columns:120px 1fr;gap:40px}.product-preview{margin-top:48px}}
+@media(max-width:600px){.case-page{padding-bottom:48px}.case-nav{padding:24px;gap:20px;flex-wrap:wrap;font-size:12px}.nav-links{gap:20px}main{width:calc(100% - 48px)}.case-header{padding-top:48px}.back-projects{font-size:10px;letter-spacing:1.5px}h1{margin-top:48px}.project-meta{margin-top:80px;grid-template-columns:repeat(2,1fr);padding-inline:0}.preview-placeholder{aspect-ratio:1.65}.summary{grid-template-columns:1fr;gap:24px;margin-top:48px}.summary-label{border-right:0;min-height:0;display:flex;align-items:baseline;gap:16px}.summary-label h2{margin:0}.summary p{font-size:14px}}
+
+/* 02 — current Figma 58:82; original section and styles replaced. */
+.adspark-page .case-problem{display:flex;flex-direction:column;gap:64px;width:min(1300px,100%);margin:128px auto 0;scroll-margin-top:97px;font-family:'Noto Sans SC',sans-serif}
+.case-problem .problem-row{display:grid;grid-template-columns:172px minmax(0,1fr);gap:112px;align-items:start}
+.case-problem .problem-content{min-width:0}
+.case-problem .problem-intro{min-height:128px}
+.case-problem .problem-row[aria-labelledby="users-title"]{min-height:420px}
+.case-problem .competitors{min-height:349px}
+.adspark-page .case-problem :is(p,h2,h3,h4,h5){margin:0;letter-spacing:0;text-align:left;text-wrap:wrap}
+body.adspark-page main .case-problem p{font-weight:300;color:#bdc8d0}
+.adspark-page .case-problem .chapter-label{padding-top:8px;font-size:18px;font-weight:500;line-height:28px;color:#f4f8fb;white-space:nowrap}
+.case-problem .chapter-label span{font-size:18px;color:#afddff}
+.case-problem h2{font-size:32px;font-weight:500;line-height:46px;color:#f4f8fb;white-space:nowrap}
+.adspark-page .case-problem .intro-copy{max-width:900px;margin-top:20px;font-size:18px;line-height:30.6px}
+.case-problem .section-label{display:flex;gap:10px;align-items:center;width:172px;color:#afddff;font-size:16px;font-weight:400;line-height:26px}
+.case-problem .section-label>span{width:7px;height:7px;flex:none;background:#afddff}
+.adspark-page .case-problem .users-heading{font-size:20px;font-weight:400;line-height:34px;color:#f4f8fb;margin-bottom:24px}
+.case-problem .user-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:35px}
+.case-problem .user-card{display:flex;gap:40px;align-items:flex-start;background:#0b141d;border-radius:10px;padding:26px 28px}
+.case-problem .user-card:nth-child(2){gap:24px}
+.case-problem img{display:block;flex:none;max-width:none}
+.case-problem .role-copy{display:flex;flex-direction:column;gap:8px;min-width:0;width:287px}
+.case-problem .user-card:nth-child(2) .role-copy{width:296px}
+.adspark-page .case-problem .role-label{font-size:13px;font-weight:400;line-height:22.1px;color:#8d9aa5}
+.case-problem .role-copy h5{font-size:21px;font-weight:400;line-height:35.7px;color:#f4f8fb}
+.adspark-page .case-problem .role-description{font-size:17px;line-height:28.9px}
+.case-problem .scenario-list{list-style:none;padding:0;margin:28px 0 0;border-top:1px solid rgba(175,221,255,.18)}
+.case-problem .scenario-list li{display:grid;grid-template-columns:55.668px 207.208px minmax(0,1fr);gap:24px;align-items:start;padding:20px 0;border-bottom:1px solid rgba(175,221,255,.18)}
+.case-problem .scenario-label{color:#afddff;font-size:16px;line-height:32.3px;font-weight:400}
+.case-problem .scenario-list h5{font-size:19px;font-weight:400;line-height:32.3px;color:#f4f8fb}
+.adspark-page .case-problem .scenario-list p{font-size:17px;line-height:28.9px;width:705.125px}
+.case-problem .pain-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.case-problem .pain-column{display:flex;flex-direction:column;gap:12px;min-width:0}
+.case-problem .pain-card{height:228px;position:relative;background:#0b141d;border:1px solid rgba(74,88,100,.65);border-radius:10px}
+.case-problem .pain-icon{position:absolute;top:23px;left:calc(50% - 24px)}
+.case-problem .pain-card h4{position:absolute;top:87px;left:50%;transform:translateX(-50%);width:266.667px;font-size:20px;font-weight:400;line-height:35px;color:#f4f8fb;text-align:center}
+.adspark-page .case-problem .pain-card p{position:absolute;top:134px;left:50%;transform:translateX(-50%);width:266.667px;font-size:18px;line-height:31.5px;text-align:center}
+.case-problem .need-arrow{height:38px;width:322.667px;display:flex;align-items:center;justify-content:center}
+.case-problem .need-card{height:111px;display:flex;justify-content:center;padding:24px 25.333px;border-radius:10px;background:#122533;box-shadow:0 4px 16px rgba(46,97,135,.18),0 8px 20px rgba(0,0,0,.4)}
+.adspark-page .case-problem .need-card p{width:266.667px;flex:none;font-size:18px;line-height:31.5px;color:#f4f8fb;text-align:center}
+.case-problem .competitors>.section-label{padding-top:28px}
+.case-problem .competitor-list{padding-bottom:16px}
+.case-problem .competitor-row{display:grid;grid-template-columns:250px 1px minmax(0,1fr);gap:20px;align-items:center;padding:25px 0;border-bottom:1px solid rgba(175,221,255,.18)}
+.case-problem .competitor-name{display:flex;gap:20px;align-items:center;width:250px;overflow:hidden}
+.case-problem .competitor-name h4{width:190px;flex:none;font-size:19px;font-weight:400;line-height:30px;color:#afddff}
+.case-problem .competitor-name h4 span{display:block;font-weight:300}
+.case-problem .competitor-divider{width:1px;height:48px;background:rgba(140,153,163,.65)}
+.adspark-page .case-problem .competitor-row>p{font-size:18px;line-height:30px;color:#d8e0e6}
+.case-problem .position-conclusion{background:#122533;border-radius:10px;padding:28px 36px}
+.adspark-page .case-problem .position-conclusion p{font-size:20px;font-weight:300;line-height:30px;color:#fff;white-space:normal}
+.case-problem .position-conclusion strong{font-weight:400;color:#afddff}
+@media(max-width:1250px){
+.case-problem .problem-intro,.case-problem .problem-row[aria-labelledby="users-title"],.case-problem .competitors{min-height:0}
+.case-problem .problem-row{grid-template-columns:150px minmax(0,1fr);gap:40px}
+.case-problem h2{white-space:normal}
+.case-problem .user-cards{gap:24px}
+.case-problem .user-card,.case-problem .user-card:nth-child(2){gap:20px;padding:24px}
+.case-problem .role-icon{width:64px;height:64px}
+.case-problem .scenario-list li{grid-template-columns:56px minmax(0,1fr)}
+.case-problem .scenario-list p{grid-column:2;width:auto!important}
+.case-problem .pain-grid{gap:20px}
+.case-problem .pain-card{height:auto;min-height:228px;padding:24px 16px;display:flex;flex-direction:column;align-items:center}
+.case-problem .pain-icon,.case-problem .pain-card h4,.adspark-page .case-problem .pain-card p{position:static;transform:none;width:auto}
+.case-problem .pain-icon{width:48px;height:48px}
+.case-problem .pain-card h4{margin-top:16px;font-size:18px;line-height:30px}
+.adspark-page .case-problem .pain-card p{margin-top:12px;font-size:16px;line-height:28px}
+.case-problem .need-arrow{width:100%}
+.case-problem .need-card{height:auto;min-height:111px;padding:24px 16px}
+.adspark-page .case-problem .need-card p{width:auto;flex:initial;font-size:16px;line-height:28px}
+.case-problem .competitor-row{grid-template-columns:220px 1px minmax(0,1fr)}
+.case-problem .competitor-name{width:220px;gap:12px}
+.case-problem .competitor-name h4{width:164px;font-size:17px}
+}
+@media(max-width:900px){
+.adspark-page .case-problem{margin-top:96px;gap:48px}
+.case-problem .problem-row{grid-template-columns:1fr;gap:24px}
+.case-problem .user-card,.case-problem .user-card:nth-child(2){gap:24px}
+.case-problem .pain-card{min-height:228px}
+.case-problem .competitors>.section-label{padding-top:0}
+}
+@media(max-width:600px){
+.adspark-page .case-problem{margin-top:72px;gap:40px}
+.case-problem h2{font-size:26px;line-height:39px}
+.adspark-page .case-problem .intro-copy{font-size:16px;line-height:28px}
+.case-problem .user-cards,.case-problem .pain-grid{grid-template-columns:1fr;gap:24px}
+.case-problem .role-copy,.case-problem .user-card:nth-child(2) .role-copy{width:auto;flex:1}
+.case-problem .scenario-list li{gap:12px}
+.case-problem .scenario-list h5{font-size:17px}
+.case-problem .pain-card{min-height:0}
+.case-problem .pain-card h4{font-size:20px}
+.adspark-page .case-problem .pain-card p,.adspark-page .case-problem .need-card p{font-size:18px;line-height:31.5px}
+.case-problem .competitor-row{grid-template-columns:1fr;gap:16px}
+.case-problem .competitor-name{width:auto;overflow:visible}
+.case-problem .competitor-name h4{width:auto;font-size:19px}
+.case-problem .competitor-divider{display:none}
+.case-problem .position-conclusion{padding:24px}
+.adspark-page .case-problem .position-conclusion p{font-size:18px;line-height:30px}
+}
+/* Only the two role cards and three requirement cards receive hover lighting. */
+@property --spotlight-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+.case-problem .spotlight-card{position:relative;isolation:isolate;--spotlight-x:50%;--spotlight-y:50%}
+.case-problem .spotlight-card> *{position:relative;z-index:1}
+.case-problem .spotlight-card::before,.case-problem .spotlight-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity 180ms cubic-bezier(.25,1,.5,1)}
+.case-problem .spotlight-card::before{z-index:0;background:radial-gradient(250px circle at var(--spotlight-x) var(--spotlight-y),rgba(104,190,244,.22),rgba(104,190,244,.07) 42%,transparent 75%)}
+.case-problem .spotlight-card::after{z-index:2;padding:1px;background:conic-gradient(from var(--spotlight-angle),transparent 0deg,rgba(175,221,255,.1) 80deg,rgba(175,221,255,.75) 115deg,transparent 155deg,transparent 260deg,rgba(104,190,244,.4) 300deg,transparent 340deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:card-border-light 9s linear infinite;animation-play-state:paused}
+.case-problem .spotlight-card.spotlight-active::before,.case-problem .spotlight-card.spotlight-active::after{opacity:1;transition-duration:240ms}
+.case-problem .spotlight-card.spotlight-active::after{animation-play-state:running}
+@keyframes card-border-light{to{--spotlight-angle:360deg}}
+@media(prefers-reduced-motion:reduce),(hover:none),(pointer:coarse){
+  .case-problem .spotlight-card::before,.case-problem .spotlight-card::after{display:none;animation:none;transition:none}
+}
+/* 02 spacing refinement — webpage-only, latest user direction. */
+.adspark-page .case-problem{gap:0;max-width:1240px;--case-section-space:96px;--case-intro-space:72px;--case-conclusion-space:64px}
+.case-problem>.problem-row+.problem-row{margin-top:var(--case-section-space)}
+.case-problem>.problem-row[aria-labelledby="users-title"]{margin-top:var(--case-intro-space)}
+.case-problem>.problem-row[aria-labelledby="position-title"]{margin-top:var(--case-conclusion-space)}
+.case-problem .problem-row{gap:80px}
+.case-problem .problem-intro,.case-problem .problem-row[aria-labelledby="users-title"],.case-problem .competitors{min-height:0}
+.case-problem h2{font-size:30px;line-height:44px;white-space:normal}
+.adspark-page .case-problem .intro-copy{margin-top:28px;max-width:800px;font-size:16px;line-height:30px}
+.adspark-page .case-problem .users-heading{font-size:20px;font-weight:500;line-height:32px;margin-bottom:32px}
+.case-problem .user-cards{gap:40px;align-items:stretch}
+.case-problem .user-card,.case-problem .user-card:nth-child(2){gap:24px;padding:32px 28px}
+.case-problem .role-copy,.case-problem .user-card:nth-child(2) .role-copy{width:auto;flex:1;gap:10px}
+.case-problem .role-copy h5{font-size:19px;font-weight:500;line-height:32px}
+.adspark-page .case-problem .role-description{font-size:15px;line-height:28px}
+.case-problem .scenario-list{margin-top:40px}
+.case-problem .scenario-list li{grid-template-columns:56px 190px minmax(0,1fr);gap:24px;padding:28px 0}
+.case-problem .scenario-list h5{font-size:17px;line-height:30px}
+.case-problem .scenario-label{font-size:14px;line-height:30px}
+.adspark-page .case-problem .scenario-list p{grid-column:auto;width:auto;font-size:15px;line-height:28px}
+.case-problem .pain-grid{gap:40px;align-items:stretch}
+.case-problem .pain-column{gap:16px}
+.case-problem .pain-card{height:auto;min-height:232px;flex:1;display:flex;flex-direction:column;align-items:center;padding:28px 16px}
+.case-problem .pain-icon{position:static;flex:none}
+.case-problem .pain-card h4{position:static;transform:none;width:100%;margin-top:20px;font-size:18px;font-weight:500;line-height:30px;text-align:center}
+.adspark-page .case-problem .pain-card p{position:static;transform:none;width:100%;margin-top:12px;font-size:15px;line-height:27px;text-align:center}
+.case-problem .need-arrow{width:100%;height:44px}
+.case-problem .need-card{height:auto;min-height:110px;padding:28px 16px;align-items:center}
+.adspark-page .case-problem .need-card p{width:auto;flex:1;font-size:15px;line-height:27px}
+.case-problem .competitor-row{grid-template-columns:250px 1px minmax(0,1fr);gap:24px;padding:32px 0}
+.case-problem .competitor-name{width:250px;gap:26px;overflow:visible}
+.case-problem .competitor-name h4{width:180px;font-size:17px;line-height:29px}
+.adspark-page .case-problem .competitor-row>p{font-size:15px;line-height:29px}
+.case-problem .competitors>.section-label{padding-top:34px}
+.case-problem .position-conclusion{padding:36px 40px}
+.adspark-page .case-problem .position-conclusion p{font-size:17px;line-height:32px}
+@media(max-width:1250px){.summary{grid-template-columns:150px minmax(0,1fr);gap:80px}}
+@media(max-width:1100px){
+.summary{grid-template-columns:136px minmax(0,1fr);gap:40px}
+.case-problem .problem-row{grid-template-columns:136px minmax(0,1fr);gap:40px}
+.case-problem .user-cards{gap:28px}
+.case-problem .user-card,.case-problem .user-card:nth-child(2){flex-direction:column;padding:28px;gap:20px}
+.case-problem .role-copy,.case-problem .user-card:nth-child(2) .role-copy{flex:auto}
+.case-problem .scenario-list li{grid-template-columns:56px minmax(0,1fr)}
+.adspark-page .case-problem .scenario-list p{grid-column:2}
+.case-problem .pain-grid{gap:24px}
+.case-problem .competitor-row{grid-template-columns:220px 1px minmax(0,1fr);gap:20px}
+.case-problem .competitor-name{width:220px;gap:22px}
+.case-problem .competitor-name h4{width:154px;font-size:16px}
+}
+@media(max-width:900px){
+.summary{grid-template-columns:1fr;gap:28px}
+.summary-label{border-right:0;min-height:0;display:flex;align-items:baseline;gap:16px}
+.adspark-page .case-problem{gap:0;--case-section-space:72px;--case-intro-space:56px;--case-conclusion-space:48px}
+.case-problem .problem-row{grid-template-columns:1fr;gap:28px}
+.case-problem .competitors>.section-label{padding-top:0}
+.case-problem .user-card,.case-problem .user-card:nth-child(2){flex-direction:row}
+}
+@media(max-width:600px){
+.adspark-page .case-problem{gap:0;--case-section-space:56px;--case-intro-space:48px;--case-conclusion-space:40px}
+.case-problem .problem-row{gap:24px}
+.case-problem h2{font-size:25px;line-height:38px}
+.adspark-page .case-problem .intro-copy{font-size:15px;line-height:29px;margin-top:24px}
+.case-problem .user-cards,.case-problem .pain-grid{gap:28px}
+.case-problem .user-card,.case-problem .user-card:nth-child(2){padding:28px 24px;gap:20px}
+.case-problem .role-copy,.case-problem .user-card:nth-child(2) .role-copy{flex:1}
+.case-problem .scenario-list{margin-top:32px}
+.case-problem .scenario-list li{gap:12px;padding:24px 0}
+.case-problem .pain-card{min-height:0;padding:32px 24px}
+.case-problem .pain-card h4{font-size:18px;line-height:30px}
+.adspark-page .case-problem .pain-card p,.adspark-page .case-problem .need-card p{font-size:16px;line-height:29px}
+.case-problem .competitor-row{grid-template-columns:1fr;gap:20px;padding:28px 0}
+.case-problem .competitor-name{width:auto}
+.case-problem .competitor-name h4{width:auto;font-size:17px}
+.case-problem .position-conclusion{padding:28px}
+.adspark-page .case-problem .position-conclusion p{font-size:16px;line-height:30px}
+}
+
+/* Type roles: labels, body, card headings, section headings. */
+.adspark-page{
+  --case-text-label:.875rem;
+  --case-text-body:1rem;
+  --case-text-card:1.125rem;
+  --case-text-subheading:1.25rem;
+  font-kerning:normal;
+}
+body.adspark-page main .overview :is(p,dd){font-weight:300}
+.adspark-page .summary p{max-inline-size:55ic;font-size:var(--case-text-body);line-height:1.875;letter-spacing:0;text-align:left;text-wrap:pretty}
+.adspark-page .project-meta dt{font-size:var(--case-text-label);letter-spacing:0}
+.adspark-page .project-meta dd{font-size:.9375rem;line-height:1.75;font-variant-numeric:tabular-nums}
+.adspark-page .case-problem h2{font-size:clamp(1.5625rem,1rem + 1vw,1.875rem);line-height:1.5;text-wrap:balance}
+.case-problem h2 .title-phrase{display:inline-block;max-width:100%;vertical-align:top}
+.adspark-page .case-problem .chapter-label,.case-problem .chapter-label span{font-size:var(--case-text-card);line-height:1.55}
+.case-problem .section-label{font-size:1rem;line-height:1.625}
+.adspark-page .case-problem .users-heading{font-size:var(--case-text-subheading);line-height:1.6;text-wrap:balance}
+.case-problem .role-copy h5{font-size:var(--case-text-subheading);line-height:1.6;text-wrap:balance}
+.adspark-page .case-problem .role-label{font-size:var(--case-text-label);line-height:1.7}
+.adspark-page .case-problem :is(.intro-copy,.role-description,.scenario-list p,.pain-card p,.need-card p,.competitor-row>p,.position-conclusion p){font-size:var(--case-text-body);line-height:1.875;text-wrap:pretty}
+.case-problem :is(.scenario-list h5,.pain-card h4,.competitor-name h4){font-size:var(--case-text-card);line-height:1.65;text-wrap:balance}
+.case-problem .scenario-list h5{font-weight:400}
+.case-problem .scenario-label{font-size:var(--case-text-label);line-height:2.125}
+.case-problem .competitor-name h4 span{font-size:1rem;line-height:1.8;text-wrap:nowrap}
+.adspark-page .case-problem :is(.pain-card p,.need-card p){line-height:1.75;text-wrap:balance}
+@media(max-width:1400px){
+  .case-problem :is(.pain-card,.need-card) br{display:none}
+}
+@media(max-width:600px){
+  .case-problem .role-copy h5{font-size:var(--case-text-card)}
+}

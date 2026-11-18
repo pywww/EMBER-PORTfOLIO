@@ -1,0 +1,139 @@
+/* Editorial case study. Existing copy, blue identity and hover lighting are retained. */
+.adspark-page{--editorial-label:160px;--editorial-gutter:64px}
+.adspark-page .case-header{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:40px 80px;padding-top:52px;padding-bottom:64px;border-bottom:1px solid var(--line)}
+.case-header .back-projects{grid-column:1/-1;justify-self:end;justify-content:flex-end;letter-spacing:1.6px}
+.hero-copy{align-self:center;padding-bottom:12px}
+.hero-copy h1{font-size:115px;margin:0 0 28px .03em;line-height:1.06;letter-spacing:-.055em}
+.hero-copy .subtitle{font-size:clamp(20px,2vw,28px);font-weight:300;line-height:1.6}
+.hero-copy .subtitle span{display:inline;font-size:inherit;letter-spacing:inherit;margin-top:0}
+body.adspark-page main .hero-meta{display:flex;flex-direction:column;gap:0;margin:0;padding:0;border:0}
+.hero-meta>div{display:grid;grid-template-columns:92px minmax(0,1fr);gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.hero-meta>div:last-child{border:0}
+body.adspark-page main .hero-meta dt{font-size:15px;font-weight:400;line-height:1.6}
+body.adspark-page main .hero-meta dd{font-size:17px;font-weight:400;line-height:1.6;margin:0}
+.adspark-page .summary{grid-template-columns:var(--editorial-label) minmax(0,1fr);gap:var(--editorial-gutter);margin-top:56px}
+.summary-label{border:0;min-height:0;padding:0}
+.summary-label h2{font-size:20px;line-height:30px}
+.adspark-page .summary p{max-width:none;font-size:16px;line-height:1.95;letter-spacing:0;text-align:left}
+.adspark-page .product-preview{margin:64px 0 0}
+.product-preview>img{display:block;width:94%;margin-inline:auto;height:auto;aspect-ratio:3400 / 1740;object-fit:contain;border-radius:4px}
+.product-preview figcaption{text-align:center;letter-spacing:0;font-size:14px;line-height:22px;margin-top:14px;color:#aabecb}
+.adspark-page .case-problem{margin-top:144px;--case-section-space:112px;--case-intro-space:72px;--case-conclusion-space:88px}
+.case-problem .problem-row{grid-template-columns:var(--editorial-label) minmax(0,1fr);gap:var(--editorial-gutter)}
+.case-problem [id]{scroll-margin-top:97px}
+.adspark-page .case-problem .chapter-label{padding-top:4px;white-space:nowrap;font-size:20px;line-height:34px}
+.chapter-label span{display:inline;margin-right:8px;margin-bottom:0}
+.adspark-page .case-problem .chapter-label span{font-size:20px}
+.adspark-page .case-problem h2{font-size:clamp(26px,2.1vw,32px);line-height:1.5;font-weight:500;letter-spacing:-.025em!important}
+.case-problem h2 .title-phrase{display:inline}
+.adspark-page .case-problem .intro-copy{max-width:760px;margin-top:28px;line-height:1.95}
+.case-problem .section-label{width:auto;padding-top:4px}
+.adspark-page .case-problem .users-heading{font-size:24px;line-height:36px;margin-bottom:28px;font-weight:400}
+.case-problem .user-cards{grid-template-columns:1.08fr 1fr;gap:24px}
+.case-problem .user-card,.case-problem .user-card:nth-child(2){flex-direction:column;gap:16px;padding:24px 32px;min-width:0;border:1px solid rgba(175,221,255,.11)}
+.case-problem .user-card:nth-child(2){background:#0c1b25}
+.case-problem .role-icon{width:72px;height:72px}
+.case-problem .role-copy,.case-problem .user-card:nth-child(2) .role-copy{width:100%;flex:auto;gap:12px}
+.case-problem .role-copy h5{font-size:23px;line-height:1.5;font-weight:400}
+.adspark-page .case-problem .role-description{line-height:1.85}
+.case-problem .scenario-list{margin-top:40px}
+.case-problem .scenario-list li{grid-template-columns:56px 184px minmax(0,1fr);gap:24px;padding:32px 0;align-items:start}
+.case-problem .scenario-list h5{font-size:18px;line-height:30px}
+.adspark-page .case-problem .scenario-list p{grid-column:auto;width:auto;line-height:1.85}
+.case-problem .pain-grid{grid-template-columns:1fr;gap:24px}
+.case-problem .pain-column{display:grid;grid-template-columns:minmax(0,1.1fr) 48px minmax(0,1fr);gap:12px;align-items:stretch}
+.case-problem .pain-card{display:grid;grid-template-columns:48px minmax(0,1fr);grid-template-rows:auto auto;gap:12px 20px;min-height:168px;padding:28px;align-content:center;align-items:start}
+.case-problem .pain-icon{grid-row:1/3;width:48px;height:48px;align-self:center}
+.case-problem .pain-card h4{width:auto;margin:0;font-size:18px;line-height:1.65;text-align:left;font-weight:400}
+.adspark-page .case-problem .pain-card p{width:auto;margin:0;font-size:16px;line-height:1.8;text-align:left;text-wrap:balance}
+.case-problem :is(.pain-card,.need-card) br{display:none}
+.case-problem .need-arrow{height:auto;width:100%;align-self:center}
+.case-problem .need-arrow img{transform:rotate(-90deg)}
+.case-problem .need-card{display:flex;flex-direction:column;justify-content:center;align-items:stretch;gap:14px;min-height:168px;padding:28px;border:1px solid rgba(175,221,255,.22)}
+.need-label{font-size:12px;font-weight:400;color:var(--accent);line-height:20px}
+.adspark-page .case-problem .need-card p{width:auto;flex:none;font-size:17px;line-height:1.8;text-align:left;text-wrap:pretty}
+.case-problem .competitor-list{padding:0;border-top:1px solid var(--line)}
+.case-problem .competitor-row{grid-template-columns:240px 1px minmax(0,1fr);gap:28px;padding:36px 0}
+.case-problem .competitor-name{width:auto;gap:24px;min-width:0}
+.case-problem .competitor-name h4{width:auto;flex:1;font-size:18px;line-height:1.6}
+.case-problem .competitor-name h4 span{font-size:14px;margin-top:4px;line-height:1.7}
+.case-problem .competitor-divider{height:48px}
+.case-problem .competitors>.section-label{padding-top:36px}
+.adspark-page .case-problem .competitor-row>p{line-height:1.9}
+.case-problem .position-conclusion{padding:4px 0 4px 32px;background:none;border:0;border-left:2px solid var(--accent);border-radius:0}
+.position-lead{display:block;font-weight:300}
+.position-context{display:inline;font-size:16px;line-height:1.9;color:var(--case-muted);text-wrap:pretty}
+.position-phrase{display:inline}
+.case-problem .position-conclusion strong{display:inline;margin:0;font-size:16px;line-height:1.9;font-weight:300;color:var(--case-muted)}
+.position-detail{display:block;width:100%;max-width:none;margin-top:24px;font-size:clamp(20px,1.5vw,24px);font-weight:400;line-height:1.7;color:var(--accent);text-wrap:pretty}
+.adspark-page .case-page{padding-bottom:112px}
+/* Keep the opening text within its own desktop screen; artwork starts below it. */
+@media(min-width:901px){
+ .adspark-page .case-header{min-height:calc(68svh - 15px);grid-template-rows:auto 1fr;padding-top:64px;padding-bottom:130px}
+ .case-header .back-projects{align-self:start}
+ .case-header .hero-meta{align-self:center}
+ .adspark-page .summary{min-height:calc(32svh - 72px);margin-top:48px}
+ .adspark-page .product-preview{margin-top:96px}
+}
+@media(max-width:1100px){
+ .adspark-page{--editorial-label:136px;--editorial-gutter:40px}
+ .adspark-page .case-header{grid-template-columns:minmax(0,1fr) 290px;gap:32px}
+ .hero-copy h1{font-size:115px}
+ .case-problem .pain-card{display:flex;flex-direction:column;gap:12px;padding:24px}
+ .case-problem .pain-icon{align-self:flex-start}
+ .case-problem .need-card{padding:24px}
+ .case-problem .competitor-row{grid-template-columns:210px 1px minmax(0,1fr);gap:20px}
+ .case-problem .competitor-name{gap:18px}
+ .case-problem .competitor-name h4{font-size:16px}
+ .case-problem .scenario-list li{grid-template-columns:56px minmax(0,1fr);gap:8px 24px}
+ .adspark-page .case-problem .scenario-list p{grid-column:2}
+}
+@media(max-width:900px){
+ .adspark-page .case-header{grid-template-columns:1fr;gap:40px;padding-top:40px;padding-bottom:40px}
+ .hero-copy h1{font-size:clamp(76px,13vw,112px)}
+ body.adspark-page main .hero-meta{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+ .hero-meta>div:last-child{border-bottom:1px solid var(--line)}
+ .adspark-page .summary,.case-problem .problem-row{grid-template-columns:1fr;gap:24px}
+ .summary-label{display:flex;gap:16px}
+ .adspark-page .case-problem{margin-top:104px;--case-section-space:80px}
+ .chapter-label span{display:inline;margin-right:8px}
+ .case-problem .competitors>.section-label{padding-top:0}
+ .case-problem .pain-card{display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px 20px}
+ .case-problem .pain-icon{align-self:center}
+}
+@media(max-width:600px){
+ .hero-copy h1{font-size:80px;margin-bottom:20px}
+ .hero-copy .subtitle{font-size:20px}
+ .hero-copy .subtitle span{font-size:inherit}
+ body.adspark-page main .hero-meta{grid-template-columns:1fr;gap:0}
+ .hero-meta>div{grid-template-columns:80px 1fr;padding:12px 0}
+ .adspark-page .summary{margin-top:40px}
+ .adspark-page .summary p{font-size:16px;line-height:1.9}
+ .adspark-page .product-preview{margin-top:40px}
+ .product-preview>img{width:100%;height:auto;aspect-ratio:3400 / 1740;object-fit:contain}
+ .product-preview figcaption{text-align:center}
+ .adspark-page .case-problem{margin-top:80px;--case-intro-space:48px;--case-section-space:64px;--case-conclusion-space:56px}
+ .case-problem h2{font-size:26px;line-height:1.5}
+ .adspark-page .case-problem .users-heading{font-size:21px;line-height:1.6}
+ .case-problem .user-cards{grid-template-columns:1fr;gap:20px}
+ .case-problem .user-card,.case-problem .user-card:nth-child(2){padding:24px 28px;gap:16px}
+ .case-problem .role-copy h5{font-size:22px}
+ .case-problem .scenario-list li{padding:28px 0;gap:8px 16px}
+ .case-problem .scenario-list h5{font-size:17px}
+ .case-problem .pain-column{grid-template-columns:1fr;gap:12px}
+ .case-problem .pain-card{min-height:0;padding:24px;gap:12px 16px}
+ .case-problem .pain-card h4{font-size:17px}
+ .case-problem .pain-icon{width:40px;height:40px}
+ .case-problem .need-arrow{height:32px}
+ .case-problem .need-arrow img{transform:none}
+ .case-problem .need-card{min-height:0;padding:24px}
+ .adspark-page .case-problem .need-card p{font-size:16px}
+ .case-problem .pain-grid{gap:32px}
+ .case-problem .competitor-row{grid-template-columns:1fr;gap:20px;padding:28px 0}
+ .case-problem .competitor-name{gap:24px}
+ .case-problem .competitor-name h4{font-size:18px}
+ .case-problem .position-conclusion{padding:0 0 0 20px}
+ .case-problem .position-conclusion strong{font-size:16px;line-height:1.9;margin-top:0}
+ .position-detail{margin-top:24px}
+ .adspark-page .case-page{padding-bottom:64px}
+}

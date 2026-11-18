@@ -1,0 +1,86 @@
+/* Index owns this continuous journey. Standalone About keeps its own layout. */
+html.has-home-journey {
+  height: auto;
+  min-height: 100%;
+  overflow-x: clip;
+  overflow-y: auto;
+}
+html.has-home-journey body { height: auto; min-height: 100%; overflow: visible; }
+.journey-track { position: relative; height: 300svh; }
+.journey-track > .hero { position: sticky; top: 0; height: 100svh; min-height: 100svh; background: transparent; }
+.journey-nav { position: fixed; inset: 0 0 auto; z-index: 60; }
+.journey-nav.is-about {
+  background: rgba(6,18,30,.46);
+  -webkit-backdrop-filter: blur(24px) saturate(1.35);
+  backdrop-filter: blur(24px) saturate(1.35);
+}
+.journey-nav .wordmark { cursor: pointer; text-decoration: none; }
+.journey-nav [aria-current="page"] { color: var(--accent); }
+.journey-ocean {
+  position: fixed; inset: 0; z-index: 6; pointer-events: none; opacity: 0;
+  background: #010813 url('./assets/ocean-microcosm-reveal-v2.png') center / cover no-repeat;
+  mix-blend-mode: screen;
+  -webkit-mask: url(#journey-aperture-mask);
+  mask: url(#journey-aperture-mask);
+  transform-origin: center;
+  will-change: opacity, transform;
+}
+.journey-edge-light { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 8; pointer-events: none; opacity: 0; mix-blend-mode: screen; filter: drop-shadow(0 0 9px rgb(175 221 255 / .25)); transform-origin: center; }
+.journey-dissolve-light { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 8; pointer-events: none; opacity: 0; mix-blend-mode: screen; }
+.journey-jelly-layer { position: fixed; inset: 0; z-index: 7; pointer-events: none; mix-blend-mode: screen; }
+.journey-jelly-layer .hero-video, .journey-jelly-layer .hero-fallback { z-index: auto; }
+.journey-jelly-layer:not(.is-video-ready) .hero-video { visibility:hidden; }
+.journey-jelly-layer .hero-fallback { display: none; }
+.journey-organism {
+  position: fixed; inset: 0; z-index: 4;
+  pointer-events: none; opacity: 0;
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+}
+.journey-organism canvas {
+  display: block; width: 100%; height: 100%; object-fit: cover;
+  transform: translateX(clamp(18px, 3vw, 56px)) scale(1.03);
+  filter: none;
+}
+.hero.journey-canvas .hero-video, .hero.journey-canvas .hero-fallback, .hero.journey-video-ready .hero-fallback { opacity: 0 !important; }
+.journey-about {
+  position: relative; z-index: 5; min-height: 100svh;
+  --ink: #020407; --paper: #f4f8fb; --line: rgb(175 221 255 / .18);
+  font-family: Manrope, 'Noto Sans SC', sans-serif;
+  color: #edf5fb;
+}
+.journey-about.about-page { background: transparent; }
+.journey-about:not(.journey-stage) { --photo-wall-hold: clamp(180px, 24vh, 240px); padding-bottom: var(--photo-wall-hold); }
+.journey-about.is-stage-hidden { visibility: hidden; }
+.journey-stage { position: fixed; inset: 0; overflow: hidden; visibility: hidden; pointer-events: none; transform-origin: center; }
+.journey-about::before {
+  content: ''; position: absolute; z-index: 0; pointer-events: none; inset: 0;
+  opacity: calc(.75 * var(--journey-background, 1));
+  background: url('./assets/about/background-clear.svg') 90% top / 112% auto no-repeat;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 clamp(300px, 32vw, 520px));
+  mask-image: linear-gradient(to bottom, transparent 0, #000 clamp(300px, 32vw, 520px));
+}
+.journey-about .about-main { position: relative; z-index: 5; }
+.journey-stage .about-portrait-anchor { opacity: 1; }
+.journey-stage .about-portrait-crop { opacity: var(--journey-photo, 1); }
+.journey-stage .about-portrait::before { opacity: calc(.72 * var(--journey-cave, 1)); }
+.journey-stage .about-portrait::after { opacity: var(--journey-cave, 1); }
+.journey-stage .about-copy h1, .journey-stage .about-subtitle { opacity: var(--journey-title, 1); transform: translateY(calc(10px * (1 - var(--journey-title, 1)))); }
+.journey-stage .about-bio { opacity: var(--journey-copy, 1); transform: translateY(calc(12px * (1 - var(--journey-copy, 1)))); }
+.journey-stage .about-capabilities { opacity: var(--journey-roles, 1); transform: translateY(calc(12px * (1 - var(--journey-roles, 1)))); }
+.journey-stage .about-actions { opacity: var(--journey-actions, 1); transform: translateY(calc(10px * (1 - var(--journey-actions, 1)))); }
+.journey-about:focus { outline: none; }
+.journey-about .about-main { padding-top: 65px; }
+.journey-about .about-next a { color: inherit; }
+.journey-fallback-link { display: block; padding: 60px 7vw; color: #afddff; }
+@media (max-width: 767px) {
+  .journey-about .about-main { padding-top: 80px; }
+}
+@media (max-width: 900px) {
+  .journey-about::before { background-size: auto 2600px; background-position: 66% top; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .journey-about:not(.journey-stage) { padding-bottom: 0; }
+  .journey-track { height: 100svh; }
+  .journey-organism, .journey-ocean, .journey-edge-light, .journey-dissolve-light { display: none; }
+}

@@ -1,0 +1,38 @@
+/* 07: editable Figma 267:6, including the user's latest card typography and copy.
+   The chapter grid and page heading reuse the existing editorial dimensions. */
+.case-reflection{--reflection-surface:#0b1720;--reflection-primary:#102c3f;--reflection-border:rgba(175,221,255,.16);display:grid;grid-template-columns:var(--editorial-label) minmax(0,1fr);gap:var(--editorial-gutter);max-width:1240px;margin:128px auto 0;scroll-margin-top:97px;font-family:'Noto Sans SC',sans-serif}
+.case-reflection :is(p,h2,h3){margin:0;letter-spacing:0;text-align:left;overflow-wrap:anywhere}
+.reflection-content{min-width:0}
+body.adspark-page main .reflection-chapter{padding-top:4px;font-size:20px;font-weight:500;line-height:34px;color:var(--paper);white-space:nowrap}
+.reflection-chapter span{color:var(--accent);margin-right:8px}
+.reflection-content h2{font-size:clamp(26px,2.1vw,32px);font-weight:500;line-height:1.5;letter-spacing:-.025em}
+body.adspark-page main .reflection-intro{margin-top:24px;font-size:16px;font-weight:300;line-height:1.9;color:var(--case-muted)}
+.reflection-cards{display:flex;flex-direction:column;gap:30px;margin-top:40px}
+.reflection-card{min-width:0;display:flex;flex-direction:column;gap:16px;padding:28px 32px;border:1px solid var(--reflection-border);border-radius:8px;background:var(--reflection-surface)}
+.reflection-card-primary{background:var(--reflection-primary)}
+.reflection-card-heading{min-width:0}
+.reflection-topic{display:flex;gap:16px;align-items:center;color:var(--accent);font-size:20px;font-weight:400;line-height:24px}
+.reflection-number{font:400 40px/48px Manrope,sans-serif;color:rgba(175,221,255,.66);flex:none}
+.reflection-card-primary .reflection-number{color:rgba(175,221,255,.8)}
+.reflection-card h3{margin-top:16px;font-size:24px;font-weight:400;line-height:30px}
+body.adspark-page main .reflection-body,body.adspark-page main .reflection-takeaway{font-size:clamp(14px,1vw,15px);font-weight:300;line-height:1.75;color:var(--case-muted)}
+body.adspark-page main .reflection-takeaway{color:var(--accent);padding-top:16px;border-top:1px solid var(--reflection-border);margin-top:auto}
+.reflection-card-copy{min-width:0;display:flex;flex-direction:column;gap:16px}
+.reflection-card-wide{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;min-height:220px}
+.reflection-card-wide h3{font-size:25px}
+.reflection-pair{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:30px}
+.reflection-pair .reflection-card{min-height:321px}
+.reflection-pair .reflection-card h3{font-size:22px}
+.reflection-pair .reflection-takeaway{min-height:69.5px}
+@media(max-width:1300px){.reflection-card-wide{grid-template-columns:220px minmax(0,1fr);gap:32px}.reflection-card h3{font-size:22px;line-height:1.5}}
+@media(max-width:1100px){.reflection-card-wide{grid-template-columns:1fr;gap:24px}.reflection-pair{grid-template-columns:1fr}.reflection-card-wide,.reflection-pair .reflection-card{min-height:0}.reflection-pair .reflection-takeaway{min-height:0}}
+@media(max-width:900px){.case-reflection{grid-template-columns:1fr;gap:24px;margin-top:96px}}
+@media(max-width:600px){.case-reflection{margin-top:72px}.reflection-content h2{font-size:24px;line-height:1.55}.reflection-card{padding:24px}.reflection-cards,.reflection-pair{gap:24px}.reflection-topic{font-size:18px}.reflection-card h3,.reflection-card-wide h3{font-size:21px;line-height:1.5}body.adspark-page main .reflection-body,body.adspark-page main .reflection-takeaway{font-size:15px;line-height:1.8}}
+@media(max-width:1300px){.reflection-pair .reflection-card h3{font-size:20px}}
+.case-project-return{display:flex;justify-content:flex-end;max-width:1240px;margin:64px auto 0}
+.project-return-button{display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:48px;padding:12px 0;border:0;border-radius:0;background:none;color:var(--paper);font-family:Manrope,'Noto Sans SC',sans-serif;font-size:14px;font-weight:500;line-height:24px;letter-spacing:0;transition:color 160ms}
+.project-return-button>span:first-child{color:var(--accent)}
+.project-return-button:hover{color:var(--accent)}
+.project-return-button:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+@media(max-width:900px){.case-project-return{padding-left:0;margin-top:48px}}
+@media(prefers-reduced-motion:reduce){.project-return-button{transition:none}}

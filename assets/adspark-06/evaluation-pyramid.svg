@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="340" height="384" viewBox="0 0 340 384" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Three-level pyramid &#194;&#183; editable vectors">
+<path id="Business level &#194;&#183; perspective diamond" d="M128.626 203.708C129.488 203.264 130.512 203.264 131.374 203.708L255.131 267.49C257.237 268.576 257.312 271.561 255.263 272.751L131.507 344.625C130.575 345.166 129.425 345.166 128.493 344.625L4.73721 272.751C2.68776 271.561 2.76282 268.576 4.8695 267.49L128.626 203.708Z" fill="#93B9CE" stroke="#AFDDFF" stroke-opacity="0.65"/>
+<path id="Business level &#194;&#183; perspective diamond_2" d="M128.098 115.241C128.975 114.777 130.025 114.777 130.902 115.241L227.207 166.127C229.292 167.229 229.349 170.194 227.308 171.376L131.003 227.13C130.073 227.668 128.927 227.668 127.997 227.13L31.6916 171.376C29.6509 170.194 29.7083 167.229 31.7932 166.127L128.098 115.241Z" fill="#5287A5" stroke="#AFDDFF" stroke-opacity="0.65"/>
+<path id="Technical level &#194;&#183; perspective cap" d="M127.004 12.741C128.192 10.9608 130.808 10.9608 131.996 12.741L184.204 91.0021C185.173 92.4547 184.702 94.4246 183.18 95.2812L130.972 124.672C130.058 125.186 128.942 125.186 128.028 124.672L75.8197 95.2812C74.2981 94.4246 73.8267 92.4547 74.7957 91.0021L127.004 12.741Z" fill="#285F80" fill-opacity="0.8" stroke="#AFDDFF" stroke-opacity="0.65"/>
+<path id="Level guide" d="M158 43H332" stroke="#7FA5BB" stroke-width="1.4"/>
+<circle id="Guide endpoint" cx="332" cy="43" r="4.5" fill="#020407" stroke="#AFDDFF"/>
+<path id="Level guide_2" d="M218 161H332" stroke="#7FA5BB" stroke-width="1.4"/>
+<circle id="Guide endpoint_2" cx="332" cy="161" r="4.5" fill="#020407" stroke="#AFDDFF"/>
+<path id="Level guide_3" d="M260 279H332" stroke="#7FA5BB" stroke-width="1.4"/>
+<circle id="Guide endpoint_3" cx="332" cy="279" r="4.5" fill="#020407" stroke="#AFDDFF"/>
+</g>
+</svg>

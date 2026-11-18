@@ -1,0 +1,85 @@
+/* finesse · existing navy / Noto SC + Manrope / weighted cards + open rows / static / matte borders.
+   06 follows Figma 216:6 and the site's editorial column system. */
+.case-validation{--validation-muted:var(--case-muted);--validation-quiet:#899fab;--validation-primary:#102c3f;--validation-surface:#0b1720;--validation-border:rgba(175,221,255,.16);--validation-label-border:#2b4d62;max-width:1240px;margin:128px auto 0;scroll-margin-top:97px;font-family:'Noto Sans SC',sans-serif}
+.case-validation :is(p,h2,h3,h4){margin:0;letter-spacing:0;text-align:left;overflow-wrap:anywhere}
+.validation-row{display:grid;grid-template-columns:var(--editorial-label) minmax(0,1fr);gap:var(--editorial-gutter)}
+.validation-content{min-width:0}
+.validation-chapter{padding-top:4px}
+body.adspark-page main .validation-chapter p{font-size:20px;font-weight:500;line-height:34px;white-space:nowrap;color:var(--paper)}
+.validation-chapter p span{color:var(--accent);margin-right:8px}
+.validation-content h2{font-size:clamp(26px,2.1vw,32px);font-weight:500;line-height:1.5;letter-spacing:-.025em}
+body.adspark-page main .validation-intro{margin-top:24px;font-size:16px;font-weight:300;line-height:1.9;color:var(--validation-muted)}
+.validation-outcomes{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;margin-top:40px}
+.validation-outcome{min-width:0;min-height:0;padding:28px 32px;border:1px solid var(--validation-border);border-radius:8px;background:var(--validation-surface)}
+.validation-outcome-primary{background:var(--validation-primary);display:flex;flex-direction:column;gap:8px}
+.validation-outcome-primary h3,.validation-outcome-delivered h3{font-size:20px;font-weight:400;line-height:30px}
+body.adspark-page main .validation-number{font:400 clamp(44px,4.2vw,64px)/1.25 Manrope,sans-serif;color:var(--accent);white-space:nowrap;margin-block:8px}
+body.adspark-page main .validation-estimate{font-size:13px;font-weight:300;line-height:24px;color:var(--accent)}
+body.adspark-page main .validation-formula{font-size:12px;font-weight:300;line-height:22px;color:var(--validation-muted)}
+body.adspark-page main .validation-outcome-delivered>p{margin-top:16px;font-size:16px;font-weight:300;line-height:1.9;color:var(--validation-muted)}
+.validation-delivered-summary{margin-top:24px;padding-top:16px;border-top:1px solid var(--validation-border)}
+body.adspark-page main .validation-delivered-summary p{font-size:13px;font-weight:300;line-height:24px;color:var(--validation-quiet)}
+.validation-delivered-summary strong{display:block;margin-top:8px;font-size:18px;font-weight:400;line-height:30px}
+.validation-assessment{margin-top:80px}
+.validation-section-label{display:flex;gap:10px;align-items:flex-start;color:var(--accent);font-size:16px;font-weight:400;line-height:26px}
+.validation-section-label>span{width:7px;height:7px;margin-top:9px;flex:none;background:var(--accent)}
+.validation-assessment-content{display:grid;grid-template-columns:280px minmax(0,1fr);gap:24px;min-width:0}
+.validation-pyramid{display:block;width:100%;height:auto;align-self:start}
+.validation-layers{padding-top:30px;min-width:0}
+.validation-layer{display:grid;grid-template-columns:180px minmax(0,1fr);gap:24px;min-height:118px;align-content:start}
+.validation-layer h4{font-size:16px;font-weight:400;line-height:26px;white-space:nowrap;align-self:start}
+.validation-layer>div{min-width:0}
+.validation-metric-part{display:inline-block;max-width:100%}
+body.adspark-page main .validation-metric{font-size:17px;font-weight:300;line-height:1.9;color:var(--accent);word-break:break-word;line-break:anywhere;text-wrap:wrap}
+body.adspark-page main .validation-status{margin-top:8px;font-size:14px;font-weight:300;line-height:24px;color:var(--validation-muted)}
+.validation-layer+.validation-layer{margin-top:0}
+.validation-findings{margin-top:80px}
+.validation-findings-content{min-width:0}
+.validation-findings-head,.validation-finding{display:grid;grid-template-columns:320fr 340fr 292fr;gap:32px}
+.validation-findings-head>span{display:block;padding:5px 12px;border:1px solid var(--validation-label-border);border-radius:3px;background:var(--validation-primary);color:var(--accent);font-size:14px;font-weight:500;line-height:20px;text-align:center}
+.validation-finding{margin-top:24px}
+body.adspark-page main .validation-finding p{font-size:clamp(14px,1vw,15px);font-weight:300;line-height:1.75}
+body.adspark-page main .validation-observation{color:var(--paper)}
+body.adspark-page main .validation-reason{color:var(--validation-muted)}
+body.adspark-page main .validation-next{color:var(--accent)}
+.validation-mobile-label{display:none}
+@media(max-width:1440px) and (min-width:901px){
+ .validation-assessment-content{grid-template-columns:28% minmax(0,1fr)}
+ .validation-layer{grid-template-columns:1fr;gap:8px;min-height:0;margin-bottom:24px}
+ .validation-layers{padding-top:0}
+ .validation-pyramid{align-self:start}
+ .validation-outcomes{grid-template-columns:minmax(0,1fr) minmax(420px,1fr);gap:24px}
+ .validation-outcome{padding:24px}
+}
+@media(max-width:1100px){.validation-outcomes{grid-template-columns:1fr}}
+@media(max-width:900px){
+ .case-validation{margin-top:96px}
+ .validation-row{grid-template-columns:1fr;gap:24px}
+ .validation-assessment{margin-top:64px}
+ .validation-assessment-content{grid-template-columns:28% minmax(0,1fr);gap:20px}
+ .validation-layer{grid-template-columns:1fr;gap:8px;min-height:0;margin-bottom:28px}
+ .validation-layers{padding-top:0}
+ .validation-pyramid{align-self:start}
+ .validation-findings{margin-top:48px}
+ .validation-findings-head,.validation-finding{gap:20px}
+ .validation-outcome{padding:24px}
+ body.adspark-page main .validation-finding p{font-size:15px;line-height:1.8}
+}
+@media(max-width:600px){
+ .case-validation{margin-top:72px}
+ .validation-content h2{font-size:24px;line-height:1.55}
+ .validation-outcomes{grid-template-columns:1fr;gap:16px;margin-top:24px}
+ .validation-outcome{min-height:0;padding:24px}
+ body.adspark-page main .validation-number{font-size:clamp(40px,12vw,56px);line-height:1.25}
+ .validation-outcome-delivered h3{font-size:20px}
+ .validation-delivered-summary strong{font-size:18px;margin-top:12px}
+ .validation-assessment-content{grid-template-columns:1fr;gap:24px}
+ .validation-pyramid{width:min(100%,280px);justify-self:center}
+ .validation-layer{padding-bottom:24px;border-bottom:1px solid var(--validation-border);margin-bottom:24px}
+ .validation-layer:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}
+ .validation-findings-head{display:none}
+ .validation-finding{grid-template-columns:1fr;gap:16px;margin-top:0;padding:0 0 28px}
+ .validation-finding+.validation-finding{padding-top:28px;border-top:1px solid var(--validation-border)}
+ .validation-finding:last-child{padding-bottom:0}
+ .validation-mobile-label{display:block;margin-bottom:8px;padding:5px 12px;border:1px solid var(--validation-label-border);border-radius:3px;background:var(--validation-primary);color:var(--accent);font-size:14px;font-weight:500;line-height:20px;text-align:center}
+}

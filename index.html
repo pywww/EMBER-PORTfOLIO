@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#010307" />
+    <title>EMBER // AI PRODUCT PORTFOLIO</title>
+    <style>
+      #home-opening-veil { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 9999; pointer-events: none; background: #020407; animation: home-veil-timeout 0s 7s forwards; }
+      html.home-opening .hero-video, html.home-opening .hero-fallback, html.home-opening .content-layer, html.home-opening .journey-nav { visibility: hidden; }
+      html.home-opening .anim-fade-up, html.home-opening .anim-fade-in, html.home-opening .node-square, html.home-opening .connector, html.home-opening .plus { animation-play-state: paused; }
+      @keyframes home-veil-timeout { to { visibility: hidden; } }
+      @media (prefers-reduced-motion: reduce) { #home-opening-veil { display: none; } }
+    </style>
+    <script>if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('home-opening');</script>
+    <link href="./local-fonts.css?v=20261117-local" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=20261118-jeju-myeongjo" />
+    <link rel="stylesheet" href="./home-ocean.css?v=20261030-18" />
+    <link rel="stylesheet" href="./home-journey.css?v=20261117-photo-wall-hold" />
+    <link rel="stylesheet" href="./home-ending.css?v=20261116-matched-type-1" />
+    <link rel="prefetch" href="./about.html" />
+    <link rel="prefetch" href="./internship.html" />
+    <link rel="prefetch" href="./ai-projects.html" />
+    <link rel="prefetch" href="./detail.css" as="style" />
+    <link rel="prefetch" href="./navigation.css" as="style" />
+    <link rel="prefetch" href="./assets/profile-photo-graded-v3.webp" as="image" />
+    <link rel="prefetch" href="./assets/hero-orchids.png" as="image" />
+  </head>
+  <body>
+    <canvas id="home-opening-veil" aria-hidden="true"></canvas>
+    <section class="hero" aria-labelledby="hero-title">
+      <video class="hero-video anim-fade-in" autoplay muted loop playsinline>
+        <source src="./assets/home-background-original-20261117.mp4" type="video/mp4" />
+      </video>
+      <img class="hero-fallback" src="./assets/hero-orchids.png" alt="" aria-hidden="true" />
+      <div class="ocean-atmosphere" aria-hidden="true">
+        <div class="ocean-surface"></div>
+        <div class="ocean-sunrays"></div>
+        <div class="ocean-silt"></div>
+      </div>
+      <canvas class="ocean-wake" aria-hidden="true"></canvas>
+      <div class="content-layer">
+        <nav class="top-nav" aria-label="Main navigation">
+          <div class="nav-left">
+            <span class="wordmark anim-fade-up delay-200">[<span class="wordmark-name">EMBER</span>]<span class="wordmark-separator">//</span>PORTFOLIO</span>
+            <div class="desktop-links">
+              <a class="nav-item anim-fade-up delay-350" href="./about.html"><span>01.</span> <b data-copy="navAbout">ABOUT</b></a>
+              <a class="nav-item anim-fade-up delay-450" href="./ai-projects.html"><span>02.</span> <b data-copy="navProjects">PROJECTS</b></a>
+              <a class="nav-item anim-fade-up delay-550" href="./internship.html"><span>03.</span> <b data-copy="navInternship">INTERNSHIP</b></a>
+            </div>
+          </div>
+          <button class="menu-toggle anim-fade-in delay-400" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="menu-icon"><i></i><i></i></span><span class="close-icon"><i></i><i></i></span>
+          </button>
+        </nav>
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+          <div class="mobile-backdrop"></div>
+          <div class="mobile-panel">
+            <div class="mobile-links">
+              <a href="./about.html"><span>01.</span> <b data-copy="navAbout">ABOUT</b></a><a href="./ai-projects.html"><span>02.</span> <b data-copy="navProjects">PROJECTS</b></a><a href="./internship.html"><span>03.</span> <b data-copy="navInternship">INTERNSHIP</b></a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-copy">
+          <h1 id="hero-title" class="hero-title anim-fade-up delay-400"><span data-copy="heroLine1">I question, shape,</span><span data-copy="heroLine2">and build</span><span data-copy="heroLine3">products.</span></h1>
+          <a class="primary-cta anim-fade-up delay-900" href="./ai-projects.html"><span aria-hidden="true">↗</span><span data-copy="cta">EXPLORE PROJECTS</span></a>
+        </div>
+        <div class="grid-lines" aria-hidden="true">
+          <i class="grid-v v1 delay-600"></i><i class="grid-v v2 delay-700"></i><i class="grid-v v3 delay-800"></i><i class="grid-v v4 delay-900"></i><i class="grid-h h1 delay-800"></i><i class="grid-h h2 delay-950"></i>
+          <b class="plus p12 delay-1080"></b><b class="plus p13 delay-1160"></b><b class="plus p21 delay-1320"></b><b class="plus p22 delay-1400"></b><b class="plus p23 delay-1480"></b><b class="plus p24 delay-1560"></b>
+        </div>
+        <div class="node-system" aria-hidden="true">
+          <svg class="connector delay-1000"><line x1="75%" y1="14%" x2="66%" y2="14%" /></svg><svg class="connector delay-1080"><line class="node-1-connector" x1="66%" y1="14%" x2="59%" y2="23%" /></svg><svg class="connector delay-1100"><line class="node-2-connector" x1="37%" y1="59%" x2="23%" y2="77%" /></svg><svg class="connector delay-1160"><line class="node-2-horizontal" x1="23%" y1="77%" x2="12%" y2="77%" /></svg><svg class="connector delay-1200"><line class="node-3-horizontal" x1="78%" y1="72%" x2="63%" y2="72%" /></svg><svg class="connector delay-1240"><line class="node-3-connector" x1="63%" y1="72%" x2="58%" y2="64%" /></svg>
+          <span class="node-square node-1 delay-600"></span><span class="node-square node-2 delay-700"></span><span class="node-square node-3 delay-800"></span>
+          <div class="node-label label-1 anim-slide-left delay-1400"><span class="node-label-title" data-copy="thinkingTitle">[ PRODUCT_THINKING ]</span><p data-copy="thinkingBody">Turning ambiguous problems into clear product choices.</p></div>
+          <div class="node-label label-2 anim-slide-left delay-1500"><span class="node-label-title" data-copy="buildingTitle">[ BUILDING ]</span><p data-copy="buildingBody">Vibe-coded prototypes that make ideas testable.</p></div>
+          <div class="node-label label-3 anim-slide-right delay-1560"><span class="node-label-title" data-copy="explorationTitle">[ EXPLORATION ]</span><p data-copy="explorationBody">Connecting AI capabilities with real human needs.</p></div>
+        </div>
+      </div>
+    </section>
+    <script src="./home-reveal.js?v=20261104-no-center-orb-1"></script>
+    <script src="./script.js?v=20261118-no-language"></script>
+    <script src="./home-journey.js?v=20261118-no-language"></script>
+    <link rel="stylesheet" href="./journey-sections.css?v=seam-base-34">
+    <script src="./journey-rift-edge.js?v=20261116-perf"></script>
+    <script src="./growth-reveal.js?v=20261117-work-entrance"></script>
+    <footer class="home-ending" aria-label="结束与联系">
+      <div class="ending-water" aria-hidden="true"><div class="ending-bridge"></div><div class="ending-transition-shade"></div><div class="ending-seabed"></div><div class="ending-light-rays"></div><svg class="ending-silver-ripples" viewBox="0 0 800 230" preserveAspectRatio="none"><defs><linearGradient id="silver-ripple"><stop stop-color="#dcecf4" stop-opacity="0"/><stop offset=".45" stop-color="#dcecf4" stop-opacity=".65"/><stop offset=".57" stop-color="#f3f9fc" stop-opacity=".85"/><stop offset="1" stop-color="#dcecf4" stop-opacity="0"/></linearGradient></defs><g fill="none" stroke="url(#silver-ripple)" stroke-linecap="round"><path d="M75 69 C108 65 124 81 158 78 S198 72 228 80" stroke-width="1.1"/><path d="M274 125 C307 120 320 131 350 128 S387 122 409 129" stroke-width="1"/><path d="M137 176 C162 173 172 180 197 178 S218 175 237 178" stroke-width=".8"/></g></svg></div>
+      <div class="ending-content">
+        <p class="ending-thanks" lang="en">Thank you for visiting</p>
+        <span class="ending-jellyfish-wrap" aria-hidden="true"><img class="ending-jellyfish" src="./assets/ending-orchid-v2.png" alt="" /></span>
+        <p class="ending-reflection" lang="en">Behind every need is a goal someone hopes to reach.</p>
+        <button type="button" class="ending-contact-button" aria-haspopup="dialog">联系我 <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="ending-bottom"><span>[ EMBER ] // PORTFOLIO</span><a href="#" class="ending-top">返回顶部 ↑</a></div>
+    </footer>
+    <script src="./model-comparison.js"></script>
+    <script src="./journey-sections.js?v=20261117-work-entrance"></script>
+    <script src="./home-ending.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="320" viewBox="0 0 440 320" role="img" aria-labelledby="title desc">
+  <title id="title">核心漏斗观察节点</title>
+  <desc id="desc">模特设置、发起试穿、试穿成功、保存衣橱、创建搭配。颜色与尺寸仅示意层级，不代表实测转化率；保存与搭配分别观察。</desc>
+  <defs>
+    <linearGradient id="layer1" x2="0" y2="1"><stop stop-color="#b2e4f4"/><stop offset="1" stop-color="#82c6e4"/></linearGradient>
+    <linearGradient id="layer2" x2="0" y2="1"><stop stop-color="#80c7e6"/><stop offset="1" stop-color="#58a8d3"/></linearGradient>
+    <linearGradient id="layer3" x2="0" y2="1"><stop stop-color="#599fd1"/><stop offset="1" stop-color="#3d7fb7"/></linearGradient>
+    <linearGradient id="layer4" x2="0" y2="1"><stop stop-color="#457bb7"/><stop offset="1" stop-color="#365f98"/></linearGradient>
+    <linearGradient id="layer5" x2="0" y2="1"><stop stop-color="#47649d"/><stop offset="1" stop-color="#344778"/></linearGradient>
+  </defs>
+  <g stroke-width="1">
+    <path d="M132 30 242 72 132 114 22 72Z" fill="url(#layer1)" stroke="#b2e4f4"/>
+    <path d="m132 100 86 33-86 33-86-33Z" fill="url(#layer2)" stroke="#8ad1ef"/>
+    <path d="m132 156 63 25-63 25-63-25Z" fill="url(#layer3)" stroke="#70b2df"/>
+    <path d="m132 203 42 18-42 18-42-18Z" fill="url(#layer4)" stroke="#608dc6"/>
+    <path d="m132 242 24 12-24 12-24-12Z" fill="url(#layer5)" stroke="#7286b9"/>
+  </g>
+  <g stroke="#8297a6" stroke-opacity=".6" stroke-width="1" fill="none">
+    <path d="M257 72h34M231 133h60M208 181h83M188 221h103M170 254h121"/>
+    <g fill="#0b1720"><circle cx="291" cy="72" r="3"/><circle cx="291" cy="133" r="3"/><circle cx="291" cy="181" r="3"/><circle cx="291" cy="221" r="3"/><circle cx="291" cy="254" r="3"/></g>
+  </g>
+  <g fill="#c4d0d9" font-family="Noto Sans SC,Microsoft YaHei,sans-serif" font-size="19" font-weight="400">
+    <text x="312" y="79">模特设置</text><text x="312" y="140">发起试穿</text><text x="312" y="188">试穿成功</text><text x="312" y="228">保存衣橱</text><text x="312" y="261">创建搭配</text>
+  </g>
+</svg>

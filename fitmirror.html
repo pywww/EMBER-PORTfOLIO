@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="FitMirror：从个人网购困扰出发，以AI试穿辅助购买判断，探索衣物收藏与搭配。EMBER个人作品集。">
+  <meta name="theme-color" content="#020407">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b1720'/%3E%3Cpath d='M10 24V8h13v3H13v4h8v3h-8v6' fill='%23afddff'/%3E%3C/svg%3E">
+  <title>FitMirror — EMBER Portfolio</title>
+  <link href="./local-fonts.css?v=20261117-local" rel="stylesheet">
+  <link rel="stylesheet" href="./detail.css">
+  <link rel="stylesheet" href="./navigation.css?v=20261118-nav-spacing">
+  <link rel="stylesheet" href="./fitmirror.css?v=20261118-back-right">
+  <link rel="stylesheet" href="./project-footer.css?v=20261117-footer-thanks">
+  <script src="./fitmirror.js?v=20261116-motion" defer></script>
+</head>
+<body class="fitmirror-page frosted-nav-page">
+  <a class="skip-link" href="#main">跳至正文</a>
+  <nav class="detail-nav" aria-label="网站导航">
+    <a class="back" href="./index.html" aria-label="返回首页"><span>←</span> <b>BACK TO PORTFOLIO</b><span class="nav-short">首页</span></a>
+    <div class="detail-links">
+      <a href="./about.html" aria-label="关于我"><span>01.</span><b>ABOUT</b><span class="nav-short">关于</span></a>
+      <a href="./ai-projects.html" aria-current="page" aria-label="项目"><span>02.</span><b>PROJECTS</b><span class="nav-short">项目</span></a>
+      <a href="./internship.html" aria-label="实习经历"><span>03.</span><b>INTERNSHIP</b><span class="nav-short">实习</span></a>
+    </div>
+  </nav>
+
+  <main id="main" class="fm-main">
+    <header class="fm-hero fm-product-hero">
+      <a class="back-projects" href="./ai-projects.html">← <span>BACK TO PROJECTS</span></a>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <h1>FitMirror</h1>
+          <p class="hero-description">AI驱动的试穿助手与数字衣橱APP</p>
+          <dl class="hero-meta">
+            <div><dt>我的角色</dt><dd>独立推进<br>AI协作</dd></div>
+            <div><dt>项目周期</dt><dd>2026年4月</dd></div>
+            <div><dt>主要工具</dt><dd>Figma<br>Cursor</dd></div>
+            <div><dt>当前成果</dt><dd>AI试穿MVP</dd></div>
+          </dl>
+          <a class="hero-ui-link" href="https://www.figma.com/proto/fpf9PL9NrunB3fONWpUfYV/%E8%A1%A3%E6%A9%B1app?node-id=1-56&amp;p=f&amp;t=w5Zx889XyJbUGOvC-0&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=369%3A261&amp;show-proto-sidebar=1" target="_blank" rel="noopener noreferrer">查看产品 UI <svg viewBox="0 0 20 20" width="18" height="18" fill="none" aria-hidden="true"><path d="M11 3h6v6M17 3l-8 8M8 4H4v12h12v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <figure class="hero-overview">
+          <button class="image-trigger" type="button" data-zoom data-caption="FitMirror产品UI汇总" aria-label="放大查看FitMirror产品UI汇总图"><img src="./assets/fitmirror/ui-overview.png" width="1200" height="1200" alt="FitMirror产品UI汇总：首页和试穿结果居中，周围展示衣橱、穿搭工坊、试穿记录、模特选择与照片上传" fetchpriority="high" decoding="async"></button>
+        </figure>
+      </div>
+    </header>
+
+    <section class="fm-section fm-research reveal" id="problem" aria-labelledby="problem-title">
+      <p class="chapter-kicker"><span>01 /</span> 用户研究</p>
+      <div class="fm-section-body">
+      <h2 id="problem-title">喜欢的衣服，为什么看了商品图还是不敢下单？</h2>
+      <p class="section-intro">从网购时的上身顾虑出发，我将研究聚焦在买前决策与日常搭配两个场景，梳理用户从发现服饰到再次使用衣物的需求。</p>
+
+      <div class="research-audience fm-subsection">
+        <h3 class="fm-subtitle">目标用户</h3>
+        <svg class="audience-icon" viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true"><circle cx="24" cy="15" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M9 41v-4a15 15 0 0 1 30 0v4M33 8l3-3M39 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div class="audience-description"><p><strong>18–35岁女性</strong>，<span>高频网购服饰</span>、<span>注重穿搭表达</span></p><p class="audience-need">希望下单时更有把握，也能更轻松地搭配已有衣物。</p></div>
+      </div>
+
+      <div class="research-scenarios fm-subsection">
+      <h3 class="fm-subtitle">核心场景</h3>
+      <div class="research-scenes">
+        <article class="scene-card scene-purchase">
+          <div class="scene-heading"><span>买前决策</span><svg viewBox="0 0 32 32" width="32" height="32" fill="none" aria-hidden="true"><path d="M8 11h16l2 16H6l2-16Z" stroke="currentColor" stroke-width="1.5"/><path d="M12 12V8a4 4 0 0 1 8 0v4" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3>下单前的上身判断</h3>
+          <p>晚上刷到心仪大衣的折扣，加购后仍在反复对比。</p>
+          <dl><div><dt>行为</dt><dd>查看模特图、商品评论与买家秀</dd></div><div><dt>阻碍</dt><dd>参考对象与本人身材不同，难以代入上身效果</dd></div></dl>
+        </article>
+        <article class="scene-card scene-outfit">
+          <div class="scene-heading"><span>日常搭配</span><svg viewBox="0 0 32 32" width="32" height="32" fill="none" aria-hidden="true"><path d="M13 8a3 3 0 1 1 5 2c-1 1-2 1-2 3v2L5 23a1.5 1.5 0 0 0 1 3h20a1.5 1.5 0 0 0 1-3l-11-8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <h3>出门前的衣物组合</h3>
+          <p>周末想尝试新的穿搭，却需要翻找、试搭多件衣服。</p>
+          <dl><div><dt>行为</dt><dd>打开衣橱，反复挑选和组合</dd></div><div><dt>阻碍</dt><dd>衣物越来越多，已有衣服的搭配难以整理</dd></div></dl>
+        </article>
+      </div>
+
+      </div>
+
+      <div class="research-journey fm-subsection">
+        <h3 class="fm-subtitle">用户旅程</h3>
+        <h3 class="research-subtitle" id="journey-title">从下单前的犹豫，到日常选衣的困扰</h3>
+        <p class="journey-scroll-hint" id="journey-scroll-hint">左右滑动查看完整旅程 →</p>
+        <div class="journey-scroll" tabindex="0" role="region" aria-label="六阶段用户旅程图，可横向滚动" aria-describedby="journey-scroll-hint">
+          <table class="journey-map">
+            <caption class="journey-visually-hidden">六阶段用户旅程：用户行为、心理、痛点与产品机会</caption>
+            <colgroup><col class="journey-axis"><col span="6"></colgroup>
+            <thead><tr><th scope="col">阶段</th><th scope="col"><span>01</span>发现衣服</th><th scope="col"><span>02</span>加购／犹豫</th><th scope="col"><span>03</span>下单前</th><th scope="col"><span>04</span>收货后</th><th scope="col"><span>05</span>日常穿搭</th><th scope="col"><span>06</span>长期使用</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">用户行为</th><td>在电商／社媒<br>浏览穿搭</td><td>加入购物车<br>反复对比</td><td>查看商品评论<br>与买家秀</td><td>实际收到衣服<br>上身试穿</td><td>打开衣柜<br>反复挑选</td><td>衣服不断增加<br>整理已有衣物</td></tr>
+              <tr class="journey-psychology"><th scope="row">用户心理</th><td colspan="6"><div class="journey-emotion">
+                <svg viewBox="0 0 900 184" preserveAspectRatio="none" aria-hidden="true"><path class="emotion-guide" d="M0 24H900M0 144H900"/><path class="emotion-line" d="M0 18C30 18 50 24 75 24S180 36 225 38S330 60 375 76S480 120 525 120S630 96 675 96S780 82 825 82S875 76 900 76"/><g class="emotion-dot"><circle cx="75" cy="24" r="4"/><circle cx="225" cy="38" r="4"/><circle cx="375" cy="76" r="4"/><circle cx="525" cy="120" r="4"/><circle cx="675" cy="96" r="4"/><circle cx="825" cy="82" r="4"/></g></svg>
+                <span class="mood-emoji" style="--point-x:8.333%;--point-y:24px" aria-hidden="true">😊</span><span class="mood-emoji" style="--point-x:25%;--point-y:38px" aria-hidden="true">😟</span><span class="mood-emoji" style="--point-x:41.667%;--point-y:76px" aria-hidden="true">🤔</span><span class="mood-emoji" style="--point-x:58.333%;--point-y:120px" aria-hidden="true">😞</span><span class="mood-emoji" style="--point-x:75%;--point-y:96px" aria-hidden="true">😕</span><span class="mood-emoji" style="--point-x:91.667%;--point-y:82px" aria-hidden="true">😩</span>
+                <div class="mood-quote" style="--stage:0;--mood-top:40px">“这件好像<br>很好看”</div><div class="mood-quote" style="--stage:1;--mood-top:54px">“我穿会不会<br>显胖？”</div><div class="mood-quote" style="--stage:2;--mood-top:92px">“别人穿好看<br>不代表我适合”</div><div class="mood-quote" style="--stage:3;--mood-top:136px">“怎么和买家秀<br>不一样？”</div><div class="mood-quote" style="--stage:4;--mood-top:112px">“今天穿啥？”</div><div class="mood-quote" style="--stage:5;--mood-top:98px">“好像又没<br>衣服穿了”</div>
+              </div></td></tr>
+              <tr class="journey-pains"><th scope="row">用户痛点</th><td><span>模特身材不同<br>难以代入本人</span></td><td><span>购买反复犹豫<br>决策负担大</span></td><td><span>买家秀的参考<br>仍然有限</span></td><td><span>上身效果与<br>购买预期有落差</span></td><td><span>不知道怎么搭<br>衣服容易闲置</span></td><td><span>衣橱难以管理<br>已有衣物难复用</span></td></tr>
+              <tr class="journey-opportunities"><th scope="row">产品机会</th><td>AI虚拟试穿</td><td>本人形象预览</td><td>个性化试穿</td><td>提前建立预期</td><td>AI穿搭工坊</td><td>数字衣橱管理</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="research-insight fm-subsection">
+        <div class="research-conclusion">
+          <h3 class="research-insight-title">核心洞察</h3>
+          <p>用户真正想解决的，不是“买不到衣服”，而是服装网购的<strong>“确定性”</strong>（这件衣服我穿好不好看）和<strong>“掌控感”</strong>（现有的衣服怎么配）。</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="fm-section fm-positioning reveal" id="direction" aria-labelledby="direction-title">
+      <p class="chapter-kicker"><span>02 /</span> 竞品与定位</p>
+      <div class="fm-section-body">
+      <h2 id="direction-title">AI试穿如何连接买前判断与日常搭配？</h2>
+
+      <div class="competitor-comparison fm-subsection">
+        <table>
+          <caption class="visually-hidden">竞品分析：参照路径、已有解法与可借鉴设计</caption>
+          <thead><tr><th scope="col">参照路径</th><th scope="col">已有解法</th><th scope="col">可借鉴的设计</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><strong>独立试穿</strong><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/doppl/" target="_blank" rel="noopener noreferrer">Google Doppl · 2025 ↗</a></th><td data-label="已有解法">侧重个人风格探索：上传穿搭图，在本人照片上试穿并保存造型。</td><td data-label="可借鉴的设计"><strong>图片输入与本人预览</strong><span>用轻量输入获得直观的上身参考。</span></td></tr>
+            <tr><th scope="row"><strong>商品内预览</strong><div class="competitor-links"><a href="https://static.zara.net/static/pdfs/TR/assistant_terms/Assistant-terms-and-conditions-en_TR-09012026.pdf" target="_blank" rel="noopener noreferrer">Zara试穿 ↗</a><a href="https://www.aboutamazon.com/news/retail/amazon-makes-shopping-easier-with-virtual-try-on-for-shoes" target="_blank" rel="noopener noreferrer">Amazon鞋履AR ↗</a></div></th><td data-label="已有解法">侧重购买判断：Zara以个人形象预览商品，Amazon用AR查看鞋履上脚。</td><td data-label="可借鉴的设计"><strong>预览衔接商品选择</strong><span>让效果展示服务于购买判断。</span></td></tr>
+            <tr><th scope="row"><strong>虚拟换装</strong><a href="https://page.zepeto.me/en/u4EEl3wK89atkdyUiivGEck" target="_blank" rel="noopener noreferrer">ZEPETO ↗</a></th><td data-label="已有解法">侧重虚拟形象表达：选购数字服饰、组合造型，用于虚拟社交。</td><td data-label="可借鉴的设计"><strong>衣物组合与方案保存</strong><span>按品类组织衣物，保留搭配结果。</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="direction-requirement direction-summary fm-subsection">
+        <h3 class="fm-subtitle">竞品总结</h3>
+        <ul>
+          <li><div class="direction-summary-copy"><div class="direction-summary-heading"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M16 9v7l5 3"/></svg><strong>体验：让等待有反馈。</strong></div><p>用生成进度与“正在为你穿衣”等提示解释等待，超时后提供继续等待或重试的选择。</p></div></li>
+          <li><div class="direction-summary-copy"><div class="direction-summary-heading"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 7 6 10l3 5 3-1v11h8V14l3 1 3-5-5-3-2 3h-6z"/></svg><strong>功能：从试穿效果走向选衣搭配。</strong></div><p>将服饰与人体的融合、材质和褶皱作为生成质量重点，再用衣橱管理与组合搭配承接后续使用。</p></div></li>
+          <li><div class="direction-summary-copy"><div class="direction-summary-heading"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 24V8m0 16h18M11 19l5-5 4 3 5-7m-4 0h4v4"/></svg><strong>商业：围绕购买确定性探索合作。</strong></div><p>后续可与销售方探索效果付费或分成，并验证试穿能否帮助购买决策、减少退货。</p></div></li>
+        </ul>
+      </div>
+
+      <figure class="product-chain fm-subsection" aria-labelledby="product-chain-title">
+        <figcaption id="product-chain-title">从试穿新衣，到结果的后续使用</figcaption>
+        <h3 class="fm-subtitle">业务流程</h3>
+        <div class="approved-flow-frame">
+          <img class="approved-flow-image" src="./assets/fitmirror/fitmirror-business-flow-final-approved.svg" alt="FitMirror 核心业务流程图：从试穿准备、选择服饰及 AI 生成，到查看结果和后续保存衣橱、进入穿搭工坊的完整流程。" loading="lazy" decoding="async">
+        </div>
+      </figure>
+      <div class="direction-decision fm-subsection">
+        <h3 class="fm-subtitle">产品定位</h3>
+        <div class="positioning-copy">
+          <p class="positioning-conclusion"><strong>AI驱动的试穿助手与个人数字衣橱</strong></p>
+          <p class="positioning-intro">专注解决两个核心场景：</p>
+          <p class="positioning-scenarios"><strong>买前试穿：</strong>用户截图商品图进入AI试穿，快速看到服装的上身效果；<strong>衣橱搭配：</strong>录入日常衣物，自由组合穿搭，盘活衣柜。</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="fm-section experience-section" id="experience" aria-labelledby="experience-title">
+      <p class="chapter-kicker"><span>03 /</span> 核心功能</p>
+      <div class="fm-section-body">
+      <div class="reveal"><h2 id="experience-title">从AI试穿到衣物收藏与组合搭配</h2><p class="section-intro">以试穿预览辅助买前判断，通过衣物收藏与组合搭配延伸日常使用。</p></div>
+      <div class="fm-tabs" role="tablist" aria-label="核心体验分点" hidden>
+        <button type="button" role="tab" id="experience-tab-1" aria-controls="experience-panel-1"><span>1.</span>开始之前</button>
+        <button type="button" role="tab" id="experience-tab-2" aria-controls="experience-panel-2"><span>2.</span>准备输入</button>
+        <button type="button" role="tab" id="experience-tab-3" aria-controls="experience-panel-3"><span>3.</span>等待与结果</button>
+        <button type="button" role="tab" id="experience-tab-4" aria-controls="experience-panel-4"><span>4.</span>保存与延伸</button>
+      </div>
+
+      <article class="story-split reveal fm-subsection">
+        <div class="story-copy"><h3>将照片准备放在了解产品之后</h3><p>首页允许先浏览功能，通过提示条引导本人照片设置。用户可从相册选择或拍摄全身照，根据页面提示准备照片，并在预览页确认或重选。</p><p class="decision-takeaway"><strong>设计取舍：</strong>浏览阶段保持开放，在本人试穿前完成照片准备，让设置步骤服务于具体任务。</p></div>
+        <div class="screen-panel"><div class="phone-group twin">
+          <figure class="screen-shot"><button type="button" class="image-trigger" data-zoom data-caption="首页的照片设置提示" aria-label="放大首页设置提示"><img src="./assets/fitmirror/sync-20261029-home.png" width="780" height="1688" alt="首页顶部提示设置模特，主入口仍展示试穿功能" loading="lazy" decoding="async"></button><figcaption>首页提示</figcaption></figure>
+          <figure class="screen-shot"><button type="button" class="image-trigger" data-zoom data-caption="本人照片上传" aria-label="放大本人照片上传界面"><img src="./assets/fitmirror/sync-20261029-model-upload.png" width="780" height="1688" alt="本人照片上传页，提示全身照片并提供相册和拍照入口" loading="lazy" decoding="async"></button><figcaption>准备本人照片</figcaption></figure>
+          <figure class="screen-shot"><button type="button" class="image-trigger" data-zoom data-caption="本人照片确认" aria-label="放大本人照片确认界面"><img src="./assets/fitmirror/sync-20261029-model-confirm.png" width="780" height="1688" alt="本人照片确认界面，展示预览、身高体重输入及确认使用按钮" loading="lazy" decoding="async"></button><figcaption>确认本人照片</figcaption></figure>
+        </div></div>
+      </article>
+
+      <article class="story-wide reveal fm-subsection">
+        <div class="wide-story-heading"><div><h3>先确认目标服饰，再发起生成</h3></div><div class="story-copy"><p>确定本人照片后，用户上传目标服饰图，先查看预览，再发起试穿。预览页支持重新选择，便于在生成前核对衣物及图片完整性。</p><p class="decision-takeaway"><strong>设计取舍：</strong>保留生成前的确认节点，让用户有机会检查和更换素材，再进入需要等待的生成过程。</p></div></div>
+        <div class="input-composition">
+          <figure class="screen-shot"><button class="image-trigger" type="button" data-zoom data-caption="服饰选图" aria-label="放大服饰选图界面"><img src="./assets/fitmirror/sync-20261029-garment-empty.png" width="780" height="1688" alt="服饰选图空态，提供从相册选择和拍摄新照片入口" loading="lazy" decoding="async"></button><figcaption>上传目标服饰图</figcaption></figure>
+          <figure class="screen-shot"><button class="image-trigger" type="button" data-zoom data-caption="上传后的服饰预览与开始试穿入口" aria-label="放大上传后的服饰预览"><img src="./assets/fitmirror/sync-20261029-garment-selected.png" width="780" height="1688" alt="上传后的碎花连衣裙预览，下方提供开始试穿与重新选择按钮" loading="lazy" decoding="async"></button><figcaption>确认服饰预览，开始试穿</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="story-wide reveal fm-subsection">
+        <div class="wide-story-heading"><div><h3>让生成结果服务于购买判断</h3></div><div class="story-copy"><p>生成时提供等待反馈，完成后以大幅试穿图支持查看与放大。用户可再试一件、收藏衣物或进入搭配；生成失败时，可重新上传或返回首页。</p><p class="decision-takeaway"><strong>设计取舍：</strong>优先支持上身效果判断，再承接收藏与搭配，让后续操作围绕用户对这件衣服的判断展开。</p></div></div>
+        <div class="screen-panel state-panel"><div class="phone-group triple">
+          <figure class="screen-shot"><button class="image-trigger" type="button" data-zoom data-caption="试穿生成中的加载界面" aria-label="放大原加载界面"><img src="./assets/fitmirror/sync-20261029-loading.png" width="780" height="1688" alt="原加载界面，显示正在努力生成中及横向进度条" loading="lazy" decoding="async"></button><figcaption><span>生成中</span>提供处理反馈</figcaption></figure>
+          <figure class="screen-shot primary-shot"><button class="image-trigger" type="button" data-zoom data-caption="试穿结果与后续操作" aria-label="放大试穿结果"><img src="./assets/fitmirror/sync-20261029-tryon-result.png" width="780" height="1688" alt="完整展示试穿效果的结果页，底部提供保存、搭配和再试一件" loading="lazy" decoding="async"></button><figcaption><span>查看结果</span>选择下一步操作</figcaption></figure>
+          <figure class="screen-shot"><button class="image-trigger" type="button" data-zoom data-caption="生成失败与重新上传" aria-label="放大失败状态界面"><img src="./assets/fitmirror/sync-20261029-failure.png" width="780" height="1688" alt="生成失败界面，提供重新上传和返回首页按钮" loading="lazy" decoding="async"></button><figcaption><span>生成失败</span>提供重新选择去向</figcaption></figure>
+        </div></div>
+      </article>
+
+      <article class="story-split reveal fm-subsection">
+        <div class="story-copy"><h3>从单件试穿延伸到数字衣橱</h3><dl class="object-list wardrobe-points"><div><dt>保存试穿结果</dt><dd>查看上身效果后，可选择将衣物加入衣橱。</dd></div><div><dt>拍照录入已有衣物</dt><dd>拍摄或从相册选择衣物照片，确认图片并编辑名称、分类与颜色。</dd></div><div><dt>管理与搭配</dt><dd>衣橱按类别整理单件衣物，再到工坊选择组合、保存搭配方案。</dd></div></dl><p class="decision-takeaway"><strong>设计取舍：</strong>同时照顾新衣试穿与已有衣物整理，让衣橱成为后续选衣和搭配的基础。</p></div>
+        <div class="screen-panel"><div class="phone-group twin">
+          <figure class="screen-shot primary-shot"><button class="image-trigger" type="button" data-zoom data-caption="保存到衣橱" aria-label="放大保存到衣橱后的衣橱界面"><img src="./assets/fitmirror/sync-20261029-wardrobe.png" width="390" height="844" alt="保存到衣橱后的衣橱界面，以分类与网格展示单件衣物" loading="lazy" decoding="async"></button><figcaption>保存到衣橱</figcaption></figure>
+          <figure class="screen-shot"><button type="button" class="image-trigger" data-zoom data-caption="衣物图片选择与上传" aria-label="放大衣物图片上传界面"><img src="./assets/fitmirror/sync-20261029-wardrobe-selected.png" width="780" height="1688" alt="衣物图片预览页，展示选中的风衣、上传和重新选择入口" loading="lazy" decoding="async"></button><figcaption>选择衣物照片</figcaption></figure>
+          <figure class="screen-shot"><button type="button" class="image-trigger" data-zoom data-caption="编辑衣物信息" aria-label="放大衣物信息编辑界面"><img src="./assets/fitmirror/sync-20261029-wardrobe-edit.png" width="780" height="1688" alt="衣物信息编辑页，包含衣物名称、分类、颜色及保存入口" loading="lazy" decoding="async"></button><figcaption>整理衣物信息</figcaption></figure>
+          <figure class="screen-shot"><button class="image-trigger" type="button" data-zoom data-caption="穿搭工坊界面设计" aria-label="放大穿搭工坊界面"><img src="./assets/fitmirror/sync-20261029-workshop.png" width="780" height="1688" alt="穿搭工坊界面显示人物预览、衣物分类与保存搭配入口" loading="lazy" decoding="async"></button><figcaption>探索搭配</figcaption></figure>
+        </div></div>
+      </article>
+      </div>
+    </section>
+
+    <section class="fm-section reveal" id="progress" aria-labelledby="progress-title">
+      <p class="chapter-kicker"><span>04 /</span> 成果与评估</p>
+      <div class="fm-section-body">
+      <div class="reading-copy wide-copy"><h2 id="progress-title">AI试穿MVP的实现成果与评测计划</h2><p>独立推进产品方案与MVP开发，接通AI试穿主流程，并围绕完成体验、结果质量与持续使用设计评估方法。</p></div>
+      <div class="fm-delivered fm-subsection">
+        <h3 class="fm-subtitle">当前成果</h3>
+        <div class="delivered-copy"><h3>从产品方案到可运行的试穿MVP</h3>
+          <dl class="delivered-points">
+            <div><dt>设计产出</dt><dd>完成整个产品的交互原型与UI界面设计，覆盖AI试穿、智能衣橱与穿搭工坊。</dd></div>
+            <div><dt>运行成果</dt><dd>接入阿里云AI试衣API，以个人照片与服饰图片生成上身效果，跑通上传、生成与结果展示。</dd></div>
+          </dl><p class="delivered-takeaway">跑通AI试穿的主链路，构建了“AI试衣+智能衣橱”的产品闭环方案。</p>
+        </div>
+        <figure class="delivered-visual"><button class="image-trigger" type="button" data-zoom data-caption="FitMirror首页、试穿结果与智能衣橱UI原型；已跑通AI试穿主链路" aria-label="放大FitMirror三界面样机图"><img src="./assets/fitmirror/delivered-three-devices-v1.png" width="1680" height="1800" alt="三台手机错落展示FitMirror首页、试穿结果与智能衣橱UI，试穿结果位于前景" loading="lazy" decoding="async"></button></figure>
+      </div>
+      <div class="fm-evaluation fm-subsection"><h3 class="fm-subtitle">评测计划</h3><h3>把评测问题与行为记录对应起来</h3>
+        <p class="evaluation-hint" id="evaluation-hint">左右滑动查看完整评测表 →</p>
+        <div class="evaluation-layout">
+        <div class="evaluation-scroll" role="region" aria-label="评测与数据埋点计划，可横向滚动" aria-describedby="evaluation-hint" tabindex="0"><table class="evaluation-table"><caption>评测指标与埋点设计</caption><thead><tr><th scope="col">评测指标</th><th scope="col">记录的行为与反馈</th></tr></thead><tbody>
+          <tr><th scope="row">试穿完成率、响应时间</th><td>提交任务、服务返回、结果展示、失败原因与等待耗时</td></tr>
+          <tr><th scope="row">结果可用率、任务满意度</th><td>衣物完整性、人物保持、明显失真与任务后评价</td></tr>
+          <tr><th scope="row">衣橱活跃度</th><td>衣物保存成功、分类与再次查看</td></tr>
+          <tr><th scope="row">搭配创建率</th><td>进入工坊、选择上下装、搭配保存成功</td></tr>
+          <tr><th scope="row">次日留存率</th><td>匿名用户标识、首次访问日期与次日回访</td></tr>
+        </tbody></table></div>
+        <div class="evaluation-funnel">
+          <figure><button class="image-trigger" type="button" data-zoom data-caption="计划观察的五个节点；示意层级不代表实测转化率" aria-label="放大五节点核心漏斗"><img src="./assets/fitmirror/tryon-funnel-v3.svg" width="440" height="320" alt="蓝色逐层渐变的核心漏斗观察节点：模特设置、发起试穿、试穿成功、保存衣橱、创建搭配；示意图不代表实测转化率" loading="lazy"></button></figure>
+          <p>先观察试穿是否顺利完成，再分别追踪保存衣橱与创建搭配的后续选择，结合等待耗时和失败原因定位流失，并以次日回访衡量持续使用。</p>
+        </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="fm-section reflection-section" id="reflection" aria-labelledby="reflection-title">
+      <p class="chapter-kicker"><span>05 /</span> 复盘与取舍</p>
+      <div class="fm-section-body">
+      <div class="reveal"><h2 id="reflection-title">从首次体验到持续使用的设计取舍</h2><p class="section-intro">复盘聚焦首次体验、衣橱管理与搭配方向，并形成以下改进设计。</p></div>
+      <div class="fm-tabs" role="tablist" aria-label="复盘与取舍分点" hidden>
+        <button type="button" role="tab" id="reflection-tab-1" aria-controls="reflection-panel-1"><span>1.</span>首次体验</button>
+        <button type="button" role="tab" id="reflection-tab-2" aria-controls="reflection-panel-2"><span>2.</span>记录与衣橱</button>
+        <button type="button" role="tab" id="reflection-tab-3" aria-controls="reflection-panel-3"><span>3.</span>整套搭配方向</button>
+      </div>
+      <article class="reflection-block reveal fm-subsection">
+        <div class="reflection-heading"><div><h3>降低首次体验门槛</h3></div></div>
+        <div class="review-pair">
+          <div class="review-item"><div class="review-stage"><span class="small-label">本次复盘 · 首次体验</span><figure class="screen-shot"><button class="image-trigger" type="button" data-zoom data-caption="首次体验优化：预设模特与本人照片双入口" aria-label="放大本次复盘的模特选择页"><img src="./assets/fitmirror/sync-20261029-model-picker.png" width="390" height="844" alt="新模特选择页同屏提供两个预设模特、相册与拍照入口" loading="lazy" decoding="async"></button></figure></div><h4>预设体验与本人照片双入口</h4><p>将预设模特与本人照片集中在同一选择页：预设模特用于快速体验，本人照片用于查看个人上身效果。</p></div>
+        </div>
+        <p class="decision-takeaway"><strong>优化思路：</strong>先用预设模特降低首次体验门槛，再由用户选择本人照片。</p>
+      </article>
+
+      <article class="reflection-block story-split reveal fm-subsection">
+        <div class="story-copy"><div class="reflection-heading"><h3>试穿记录与衣物分层管理</h3></div><p>按回看效果、收藏衣物与复用搭配三种用途，区分保存的内容。</p><dl class="object-list"><div><dt>试穿记录</dt><dd>保留生成历史，随时回看效果。</dd></div><div><dt>衣橱</dt><dd>收藏单件衣物，卡片展示抠图，详情关联试穿图。</dd></div><div><dt>我的穿搭</dt><dd>保存工坊中搭配的整套方案。</dd></div></dl><p class="decision-takeaway"><strong>优化思路：</strong>试穿结果自动留在记录中，衣物由用户主动加入衣橱，为后续搭配建立清晰的选择范围。</p></div>
+        <div class="screen-panel"><div class="phone-group twin">
+          <figure class="screen-shot"><button class="image-trigger" type="button" data-zoom data-caption="试穿记录列表设计" aria-label="放大试穿记录列表"><img src="./assets/fitmirror/sync-20261029-history.png" width="390" height="844" alt="独立试穿记录列表，以网格展示生成历史" loading="lazy" decoding="async"></button><figcaption>试穿记录</figcaption></figure>
+          <figure class="screen-shot"><button class="image-trigger" type="button" data-zoom data-caption="试穿记录详情与衣物收藏入口" aria-label="放大试穿记录详情"><img src="./assets/fitmirror/sync-20261029-history-detail.png" width="780" height="1688" alt="试穿记录详情展示生成图及可选保存到衣橱的操作" loading="lazy" decoding="async"></button><figcaption>关联效果与操作</figcaption></figure>
+          <figure class="screen-shot"><button class="image-trigger" type="button" data-zoom data-caption="衣橱：按品类收藏与选择单件衣物" aria-label="放大记录与衣橱中的衣橱页面"><img src="./assets/fitmirror/sync-20261029-wardrobe.png" width="390" height="844" alt="衣橱页面，按分类和网格展示收藏的单件衣物" loading="lazy" decoding="async"></button><figcaption>衣橱 · 收藏单件衣物</figcaption></figure>
+          <figure class="screen-shot"><button class="image-trigger" type="button" data-zoom data-caption="我的穿搭：保存的搭配方案与管理入口" aria-label="放大我的穿搭页面"><img src="./assets/fitmirror/sync-20261029-looks.png" width="780" height="1688" alt="我的穿搭页面，展示搭配方案、日期、衣物件数及编辑分享操作" loading="lazy" decoding="async"></button><figcaption>我的穿搭 · 保存搭配方案</figcaption></figure>
+        </div></div>
+      </article>
+
+      <article class="reflection-block next-direction reveal fm-subsection"><div class="reflection-heading"><h3>上下装组合与AI搭配生成</h3></div><div class="reading-copy wide-copy"><p>工坊后续将支持选择上装与下装，生成整套效果，并将满意的组合保存到“我的穿搭”。</p></div><ol class="future-flow" aria-label="计划中的工坊使用路径"><li>选择上装与下装</li><li>AI生成搭配</li><li>查看整套效果</li><li>保存我的穿搭</li></ol><p class="decision-takeaway"><strong>优化思路：</strong>先由用户选择上下装，再统一生成整套效果，让搭配预览继续服务于购买判断。</p><div class="validation-task"><span class="small-label">下一步验证</span><p>用目标上衣搭配已有裤子，观察整套预览能否帮助用户作出购买决定。</p></div><div class="outfit-concept-visuals"><figure class="screen-shot"><button class="image-trigger" type="button" data-zoom data-caption="后续方案：选择搭配单品" aria-label="放大选择搭配单品界面"><img src="./assets/fitmirror/sync-20261029-outfit-select.png" width="402" height="874" alt="穿搭工坊方案：选择白色短上衣与牛仔长裤" loading="lazy"></button><figcaption>选择上下装</figcaption></figure><figure class="screen-shot"><button class="image-trigger" type="button" data-zoom data-caption="后续方案：生成整套搭配" aria-label="放大生成搭配界面"><img src="./assets/fitmirror/sync-20261029-outfit-loading.png" width="402" height="874" alt="穿搭工坊方案：生成搭配时的等待状态" loading="lazy"></button><figcaption>生成整套搭配</figcaption></figure><figure class="screen-shot primary-shot"><button class="image-trigger" type="button" data-zoom data-caption="后续方案：整套搭配效果示意" aria-label="放大整套搭配效果界面"><img src="./assets/fitmirror/sync-20261029-outfit-result.png" width="402" height="874" alt="穿搭工坊方案：白色短上衣与牛仔长裤的搭配效果示意" loading="lazy"></button><figcaption>查看与保存搭配</figcaption></figure></div></article>
+      </div>
+    </section>
+
+    <footer class="project-footer" aria-labelledby="project-footer-title">
+      <h2 class="project-footer-title" id="project-footer-title">Thank you for reading</h2>
+      <a class="next-project" href="./adspark.html" aria-label="下一个项目：Adspark">
+        <img class="next-project-image" src="./assets/adspark-card-laptop-v1.png" width="1920" height="1200" alt="Adspark营销素材工作台电脑样机" loading="lazy" decoding="async">
+        <span class="next-project-copy">
+          <span class="next-project-label">Next project <span aria-hidden="true">→</span></span>
+          <span class="next-project-title">Adspark</span>
+          <span class="next-project-description">为出海电商生成、修改并管理营销素材。</span>
+        </span>
+      </a>
+      <a class="project-footer-back" href="./ai-projects.html" aria-label="返回项目列表"><span aria-hidden="true">←</span> Back to all projects</a>
+    </footer>
+  </main>
+
+  <dialog class="fm-lightbox" aria-label="图片放大查看" aria-describedby="zoom-caption">
+    <div class="lightbox-toolbar"><span>图片查看</span><div><button type="button" class="zoom-size" aria-pressed="false">查看原尺寸</button><button type="button" class="zoom-close" aria-label="关闭图片查看" autofocus>关闭 <span aria-hidden="true">×</span></button></div></div>
+    <div class="zoom-stage"><img class="zoom-image" alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E"></div>
+    <p id="zoom-caption"></p>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,104 @@
+/* Shared ending for published project case studies. */
+main .project-footer {
+  --footer-text-label: .8125rem;
+  --footer-text-body: .875rem;
+  --footer-text-card-title: 1.25rem;
+  --footer-text-heading: clamp(1.25rem, 1.5vw, 1.5rem);
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 112px auto 0;
+  padding: 40px 0 44px;
+  text-align: center;
+}
+main .project-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #050c15;
+  box-shadow: 0 0 0 100vmax #050c15;
+  clip-path: inset(0 -100vmax);
+  pointer-events: none;
+}
+.adspark-page .case-page { padding-bottom: 0; }
+main .project-footer-title {
+  margin: 0;
+  color: #a7b5c1;
+  font-family: Manrope, 'Noto Sans SC', sans-serif;
+  font-size: var(--footer-text-heading);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -.035em;
+  font-kerning: normal;
+}
+main .next-project {
+  display: grid;
+  grid-template-columns: 152px minmax(0, 1fr);
+  align-items: center;
+  gap: 28px;
+  width: min(100%, 600px);
+  min-height: 124px;
+  padding: 12px 20px;
+  border: 0;
+  border-block: 1px solid rgba(175, 221, 255, .12);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--paper);
+  text-align: left;
+  text-decoration: none;
+  transition: transform 260ms cubic-bezier(.25, 1, .5, 1), border-color 220ms, background-color 220ms;
+}
+.next-project-image { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: contain; }
+.next-project-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; }
+main .next-project-label { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 2px; color: #9bbbd0; font-family: Manrope, 'Noto Sans SC', sans-serif; font-size: var(--footer-text-label); font-weight: 400; line-height: 1.5; letter-spacing: .01em; }
+main .next-project-title { color: #c2ccd5; font-family: Manrope, 'Noto Sans SC', sans-serif; font-size: var(--footer-text-card-title); font-weight: 400; line-height: 1.3; letter-spacing: -.02em; font-kerning: normal; }
+main .next-project-description { max-width: 48ch; color: #9eacb8; font-size: var(--footer-text-body); font-weight: 400; line-height: 1.7; }
+main .project-footer-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 48px;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #a7b5c1;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: .01em;
+  text-decoration: none;
+  transition: transform 220ms cubic-bezier(.25, 1, .5, 1), color 220ms, background-color 220ms, box-shadow 220ms;
+}
+main .project-footer-back:is(:hover, :focus-visible) {
+  color: var(--accent);
+  background: transparent;
+  box-shadow: none;
+}
+.project-footer a:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+main .next-project:active { border-color: var(--accent); }
+main .project-footer-back:active { color: var(--accent); background: transparent; }
+@media (hover: hover) and (pointer: fine) {
+  main .next-project:hover { border-color: rgba(175, 221, 255, .24); background: rgba(175, 221, 255, .025); }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  main .next-project:hover { transform: scale(1.01); }
+  main .project-footer-back:hover { transform: scale(1.025); }
+}
+@media (max-width: 600px) {
+  main .project-footer { margin-top: 72px; gap: 16px; padding-block: 32px 36px; }
+  main .next-project { grid-template-columns: minmax(80px, 120px) minmax(0, 1fr); gap: 16px; padding: 16px 8px; min-height: 0; }
+  .next-project-image { max-width: 120px; justify-self: center; }
+  main .project-footer { --footer-text-heading: 1.25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  main .project-footer a { transition: none; transform: none; }
+}

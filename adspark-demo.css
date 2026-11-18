@@ -1,0 +1,54 @@
+/* finesse · Adspark continuation · editorial / cool blue / reserved media / static */
+.adspark-page .case-demo{display:grid;grid-template-columns:var(--editorial-label) minmax(0,1fr);gap:var(--editorial-gutter);max-width:1240px;margin:128px auto 0;scroll-margin-top:97px;font-family:'Noto Sans SC',sans-serif}
+body.adspark-page main .demo-chapter{margin:0;padding-top:4px;white-space:nowrap;font-size:20px;font-weight:500;line-height:34px;color:var(--paper)}
+.demo-chapter>span{display:inline;margin-right:8px;margin-bottom:0;color:var(--accent)}
+.demo-content{min-width:0}
+.demo-title-phrase{display:inline-block;max-width:100%}
+.demo-intro h2{margin:0;font-size:clamp(26px,2.1vw,32px);line-height:1.5;font-weight:500;letter-spacing:-.025em;text-wrap:balance;scroll-margin-top:97px;color:var(--paper)}
+body.adspark-page main .demo-intro p{max-width:none;margin:24px 0 0;font-size:16px;font-weight:300;line-height:1.9;letter-spacing:0;color:var(--case-muted);text-align:left;text-wrap:pretty}
+.demo-media{margin:40px 0 0}
+.demo-video{display:block;width:100%;height:auto;max-width:100%;aspect-ratio:2/1;object-fit:cover;object-position:center;border:1px solid rgba(175,221,255,.16);border-radius:8px;background:#050c15}
+.demo-player{position:relative;overflow:hidden;border-radius:8px;background:#050c15}
+.demo-controls{position:absolute;inset:auto 1px 1px;display:flex;align-items:center;gap:8px;padding:20px 12px 8px;background:linear-gradient(transparent,rgba(0,0,0,.88));color:#fff}
+.demo-controls[hidden]{display:none}
+.demo-start{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:64px;height:64px;padding:0 0 0 4px;border:1px solid rgba(217,239,255,.65);border-radius:50%;background:rgba(5,18,29,.72);color:#e9f5ff;font-size:22px;cursor:pointer}
+.demo-start[hidden]{display:none}
+.demo-start:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.demo-player.is-ready:not(.has-started) .demo-controls{display:none}
+.demo-player.has-started:not(.is-paused):not(:hover):not(:focus-within) .demo-controls{opacity:0;pointer-events:none}
+.demo-controls{transition:opacity .2s ease}
+.demo-controls button{flex:none;min-width:38px;min-height:36px;padding:4px 7px;border:0;background:transparent;color:inherit;font:400 13px/1.2 Manrope,'Noto Sans SC',sans-serif;cursor:pointer}
+.demo-controls button:hover{color:var(--accent)}
+.demo-controls :is(button,input):focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.demo-time{flex:none;font:400 12px/1.2 Manrope,sans-serif;font-variant-numeric:tabular-nums;white-space:nowrap}
+.demo-seek{flex:1;min-width:24px;accent-color:#afddff;cursor:pointer}
+.demo-player:fullscreen{display:flex;align-items:center;justify-content:center;background:#000}.demo-player:fullscreen .demo-video{width:100%;max-height:100vh;object-fit:contain}
+@media(max-width:600px){.demo-controls{gap:2px;padding:14px 5px 4px}.demo-controls button{min-width:32px;padding-inline:4px;font-size:12px}.demo-time{font-size:10px}}
+.demo-placeholder{display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:16/9;min-width:0;padding:28px 32px;border:1px solid rgba(175,221,255,.16);border-radius:8px;background:#0b1720;color:var(--case-muted)}
+.demo-media-label{font-family:Manrope,sans-serif;font-size:11px;font-weight:400;line-height:20px;letter-spacing:.12em;color:var(--accent)}
+.demo-placeholder-copy{text-align:center;padding-block:20px}
+.demo-placeholder-copy>span{font-size:clamp(22px,2vw,28px);font-weight:300;line-height:1.5;color:var(--paper)}
+body.adspark-page main .demo-placeholder-copy p{margin:12px 0 0;font-size:14px;font-weight:300;line-height:24px;letter-spacing:0;color:var(--case-muted)}
+.demo-media-status{align-self:flex-end;font-size:12px;font-weight:300;line-height:20px;color:var(--case-muted)}
+.demo-flow{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 0;list-style:none;padding:0;margin:28px 0 0}
+.demo-flow li{display:flex;align-items:center;font-size:14px;font-weight:300;line-height:26px;color:var(--case-muted)}
+.demo-flow li:not(:last-child)::after{content:'→';margin-inline:14px;color:var(--accent)}
+@media(max-width:900px){
+ .adspark-page .case-demo{grid-template-columns:1fr;gap:28px;margin-top:96px}
+ .demo-chapter>span{display:inline;margin-right:8px}
+ .demo-placeholder{padding:24px}
+}
+@media(max-width:600px){
+ .adspark-page .case-demo{gap:24px;margin-top:72px}
+ .demo-intro h2{font-size:24px;line-height:1.55}
+ body.adspark-page main .demo-intro p{margin-top:20px;font-size:16px;line-height:1.9}
+ .demo-media{margin-top:28px}
+ .demo-placeholder{padding:16px}
+ .demo-placeholder-copy{padding-block:0}
+ body.adspark-page main .demo-placeholder-copy p{margin-top:8px}
+ .demo-placeholder-copy>span{font-size:22px}
+ .demo-media-label{font-size:10px;line-height:16px;letter-spacing:.08em}
+ .demo-media-status{font-size:11px;line-height:16px}
+ .demo-flow{margin-top:24px;gap:12px 0}
+ .demo-flow li:not(:last-child)::after{margin-inline:10px}
+}
