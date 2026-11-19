@@ -88,3 +88,10 @@ body.frosted-nav-page.single-screen-page .detail-main {
   .detail-links { gap: 10px; }
   .detail-nav .lang-toggle { padding-inline: 2px; }
 }
+
+@media (max-width: 680px) {
+  :is(.about-page, .projects-page, .internship-page) .detail-links { gap: 12px; }
+  :is(.about-page, .projects-page, .internship-page) .detail-links a { gap: 3px; }
+  :is(.about-page, .projects-page, .internship-page) .detail-links a b { display: inline; }
+  :is(.about-page, .projects-page, .internship-page) .detail-links a { font-size: 10px; }
+}
